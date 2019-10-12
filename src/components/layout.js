@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
 import './layout.css';
+import './breeze_layout.css';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -32,7 +33,7 @@ const Layout = ({ children }) => {
           ©
           {' '}
           {new Date().getFullYear()}
-          , Built with
+, Built with
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
