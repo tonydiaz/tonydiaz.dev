@@ -31,6 +31,15 @@ html {
   --space-xxl: 72px;
 }
 
+.bg-primary {
+  background: rgb(37, 56, 72);
+  color: white;
+}
+
+.bg-secondary {
+  background: #ff6907;
+}
+
 .container {
   margin: 0 auto;
   width: 95%;
