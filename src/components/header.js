@@ -1,19 +1,19 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import React, { useState, setState } from 'react';
+import React, { useState, setState, useEffect } from 'react';
 
 const Header = ({ siteTitle }) => {
   const [headerScrolled, setHeaderState] = useState(false);
 
-  const onScroll = () => {
-    if (window.scrollY > 78) {
-      setHeaderState(true);
-    } else {
-      setHeaderState(false);
-    }
-  };
-
-  window.addEventListener('scroll', onScroll);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 78) {
+        setHeaderState(true);
+      } else {
+        setHeaderState(false);
+      }
+    });
+  });
 
   return (
     <header
