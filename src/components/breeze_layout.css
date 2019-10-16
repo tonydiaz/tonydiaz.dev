@@ -172,6 +172,7 @@ button, .button {
   overflow: hidden;
   position: relative;
   margin: 0 8px;
+  outline: none !important;
 }
 button::after {
   clip: none !important;
@@ -180,11 +181,12 @@ button:hover, .button:hover {
   cursor: pointer;
 }
 button:active, .button:active {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 button.primary {
   background: var(--button-color);
   color: white;
+  padding: 10px 26px;
 }
 button.primary::before {
   content: "";
@@ -202,8 +204,8 @@ button.primary:hover::before {
 }
 button.primary.outlined, button.primary.transparent {
   background: transparent;
-  color:rgb(37, 56, 72);
-  border: 2px solid rgb(37, 56, 72);
+  color:var(--button-color);
+  border: 2px solid var(--button-color);
   padding: 12px 24px;
 }
 button.primary.outlined:hover {
