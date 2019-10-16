@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => {
   const [headerScrolled, setHeaderState] = useState(false);
 
   const onScroll = () => {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 78) {
       setHeaderState(true);
     } else {
       setHeaderState(false);
@@ -18,9 +18,9 @@ const Header = ({ siteTitle }) => {
   return (
     <header
       id="navbar"
-      className={headerScrolled ? 'bg-primary' : 'bg-transparent'}
+      className={headerScrolled ? 'fixed bg-primary' : 'bg-transparent'}
     >
-      <div className="px-sm">
+      <div className="container">
         <div className="navbar-content">
           <div className="navbar-left">
             <h2>{siteTitle}</h2>
