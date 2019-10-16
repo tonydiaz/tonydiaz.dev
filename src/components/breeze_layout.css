@@ -1,6 +1,111 @@
 /* LAYOUT AND GRID SYSTEM
 --------------------------------------------------------------- */
 
+/* Roboto regular */
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../Raleway/Raleway-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../Raleway/Raleway-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../Raleway/Raleway-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../Raleway/Raleway-Bold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../Raleway/Raleway-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../Raleway/Raleway-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../Raleway/Raleway-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../Raleway/Raleway-BoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+.hero {
+  background-image: url('https://quantizd.com/wp-content/uploads/2018/05/css-code-768x512.jpeg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 64px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  background-attachment: fixed;
+  clip-path: polygon(100% 0, 100% 69%, 25% 100%, 0 87%, 0 0);
+}
+.hero_content {
+  text-align: left;
+  width: 100%;
+}
+.hero_title {
+  color: white;
+  font-weight: bold;
+  font-size: 56px !important;
+  margin-top: 0;
+}
+.hero_subtitle {
+  color: white;
+  margin-top: 0px;
+  font-size: 32px;
+  font-weight: normal;
+}
+.hero_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 48px;
+  position: relative;
+}
+
+.title {
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  /* margin: 0 auto; */
+  margin-bottom:32px;
+  max-width: 50%;
+  border-bottom: 2px solid rgb(31, 180, 180);
+}
+
 *::before,
 *::after,
 * {
@@ -13,6 +118,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
+}
+
+* {
+  font-family: Raleway !important;
 }
 
 html {
@@ -36,6 +145,11 @@ html {
   color: white;
 }
 
+.bg-transparent {
+  background: transparent;
+  color: white;
+}
+
 .bg-secondary {
   background: #ff6907;
 }
@@ -44,6 +158,7 @@ html {
   margin: 0 auto;
   width: 95%;
   padding: 5rem 0;
+  max-width: 960px;
 }
 
 @media (min-width: 540px) {
@@ -62,20 +177,6 @@ html {
   .container.wide {
     margin: 0 auto;
     width: 90%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    margin: 0 auto;
-    width: 80%;
-    max-width: 960px;
-  }
-
-  .container.wide {
-    margin: 0 auto;
-    width: 85%;
-    max-width: 1200px;
   }
 }
 
@@ -1499,6 +1600,12 @@ html {
 /* Navbar
  ---------------------------------------------------------------
  ---------------------------------------------------------------*/
+
+#navbar {
+  position: fixed;
+  width: 100% !important;
+  z-index: 999 !important;
+}
 
 .navbar-content {
   padding: 15px;
