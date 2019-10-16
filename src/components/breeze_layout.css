@@ -86,7 +86,7 @@
   height: 90vh;
   background-attachment: fixed;
   clip-path: polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0);
-  margin-bottom: 48px;
+  margin: 0;
 }
 @media (min-width: 769px) {
   .hero {
@@ -101,7 +101,7 @@
     height: 90vh;
     background-attachment: fixed;
     clip-path: polygon(100% 0, 100% 83%, 25% 100%, 0 87%, 0 0);
-    margin-bottom: 48px;
+    margin: 0;
   }
 }
 @media (min-width: 1220px) {
@@ -117,7 +117,7 @@
     height: 90vh;
     background-attachment: fixed;
     clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 87%, 0 0);
-    margin-bottom: 48px;
+    margin: 0;
   }
 }
 .hero_content {
