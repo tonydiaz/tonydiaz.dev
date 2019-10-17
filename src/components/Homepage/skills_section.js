@@ -7,7 +7,7 @@ const SkillsSection = () => (
   <section className="bg-light">
     <div className="container">
       <h2 className="title">Skills</h2>
-      <div className="row">
+      <div className="row mobile-lg">
         <div className="col col-6 desktop-col-4">
           <SkillsCard>
             <SkillsIcon>
