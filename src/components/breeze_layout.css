@@ -4,57 +4,57 @@
 /* Roboto regular */
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../Raleway/Raleway-Light.ttf");
+  font-family: 'Raleway';
+  src: url('../../Raleway/Raleway-Light.ttf');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../Raleway/Raleway-Regular.ttf");
+  font-family: 'Raleway';
+  src: url('../../Raleway/Raleway-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../Raleway/Raleway-Medium.ttf");
+  font-family: 'Raleway';
+  src: url('../../Raleway/Raleway-Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../Raleway/Raleway-Bold.ttf");
+  font-family: 'Raleway';
+  src: url('../../Raleway/Raleway-Bold.ttf');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../Raleway/Raleway-LightItalic.ttf");
+  font-family: 'Raleway';
+  src: url('../../Raleway/Raleway-LightItalic.ttf');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../Raleway/Raleway-Italic.ttf");
+  font-family: 'Raleway';
+  src: url('../../Raleway/Raleway-Italic.ttf');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../Raleway/Raleway-MediumItalic.ttf");
+  font-family: 'Raleway';
+  src: url('../../Raleway/Raleway-MediumItalic.ttf');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../Raleway/Raleway-BoldItalic.ttf");
+  font-family: 'Raleway';
+  src: url('../../Raleway/Raleway-BoldItalic.ttf');
   font-weight: 600;
   font-style: italic;
 }
@@ -74,49 +74,60 @@
   --button-color-light: #f39033;
 }
 
-/* .hero {
-  background: url('https://quantizd.com/wp-content/uploads/2018/05/css-code-768x512.jpeg');
-  box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, .5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 90vh;
-  background-attachment: fixed;
-  clip-path: polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0);
-  margin: 0;
+#hero_image {
+  background-size: 'cover';
+  background-repeat: 'no-repeat';
+  background-attachment: 'fixed';
+  clip-path: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)';
+  z-index: 9;
 }
+
+#hero-image {
+  /* margin: 0 !important;
+  padding: 0 !important; */
+}
+
+#about {
+  margin-top: -136px;
+  margin-bottom: 136;
+  z-index: 1;
+  padding: 136px 0;
+}
+
+#skills {
+  position: relative;
+  padding-top: 32px;
+}
+
+#skills .container {
+  padding-top: 0 !important;
+}
+
+#skills::before {
+  display: block;
+  content: '';
+  /* background-color: var(--button-color); */
+  /* transform: rotate(167deg) skew(67deg);
+  -webkit-transform: rotate(167deg) skew(67deg); */
+  position: absolute;
+  top: -100px;
+  z-index: 100;
+  border-bottom: 100px solid #f7f7f7;
+  border-left: 30vw solid transparent;
+  border-right: 70vw solid transparent;
+  left: 0;
+}
+
 @media (min-width: 769px) {
-  .hero {
-    background: url('https://quantizd.com/wp-content/uploads/2018/05/css-code-768x512.jpeg');
-    box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, .5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 90vh;
-    background-attachment: fixed;
-    clip-path: polygon(100% 0, 100% 83%, 25% 100%, 0 87%, 0 0);
-    margin: 0;
+  #hero_image {
+    clip-path: polygon(100% 0, 100% 83%, 25% 100%, 0 87%, 0 0) !important;
   }
 }
 @media (min-width: 1220px) {
-  .hero {
-    background: url('https://quantizd.com/wp-content/uploads/2018/05/css-code-768x512.jpeg');
-    box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, .5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 90vh;
-    background-attachment: fixed;
-    clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 87%, 0 0);
-    margin: 0;
+  #hero_image {
+    clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 87%, 0 0) !important;
   }
-}*/
+}
 .hero_content {
   text-align: left;
   width: 100%;
@@ -147,21 +158,22 @@
   padding-bottom: 20px;
   text-transform: uppercase;
   margin: 0 auto;
-  margin-bottom:32px;
+  margin-bottom: 32px;
   width: 40%;
   max-width: 400px;
   border-bottom: 2px solid var(--primary);
   text-align: center;
 }
 
-button, .button {
+button,
+.button {
   padding: 8px 24px;
   border: none;
   margin: 4px;
   border-radius: 50px;
   text-transform: uppercase;
   cursor: pointer;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   letter-spacing: 1.1px;
   font-size: 14px;
   font-weight: 400;
@@ -174,10 +186,12 @@ button, .button {
 button::after {
   clip: none !important;
 }
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   cursor: pointer;
 }
-button:active, .button:active {
+button:active,
+.button:active {
   transform: scale(1.05);
 }
 button.primary {
@@ -186,9 +200,9 @@ button.primary {
   padding: 10px 26px;
 }
 button.primary::before {
-  content: "";
+  content: '';
   position: absolute;
-  background:var(--button-color-light);
+  background: var(--button-color-light);
   top: 0;
   right: 100%;
   z-index: -1;
@@ -199,9 +213,10 @@ button.primary::before {
 button.primary:hover::before {
   right: 0;
 }
-button.primary.outlined, button.primary.transparent {
+button.primary.outlined,
+button.primary.transparent {
   background: transparent;
-  color:var(--button-color);
+  color: var(--button-color);
   border: 2px solid var(--button-color);
   padding: 12px 24px;
 }
@@ -218,9 +233,9 @@ button.secondary {
   color: #333;
 }
 button.secondary::before {
-  content: "";
+  content: '';
   position: absolute;
-  background:rgb(240, 240, 240);
+  background: rgb(240, 240, 240);
   top: 0;
   right: 100%;
   z-index: -1;
@@ -231,7 +246,8 @@ button.secondary::before {
 button.secondary:hover::before {
   right: 0;
 }
-button.secondary.outlined, button.secondary.transparent {
+button.secondary.outlined,
+button.secondary.transparent {
   background: transparent;
   color: white;
   border: 2px solid white;
@@ -306,8 +322,6 @@ p {
   margin: 0 0 18px !important;
   line-height: 1.75;
 }
-
-
 
 .bg-primary {
   background: var(--primary);
@@ -1924,7 +1938,8 @@ p {
  ---------------------------------------------------------------
  ---------------------------------------------------------------*/
 
-html, body {
+html,
+body {
   font-family: 'Raleway';
   font-weight: 400;
 }

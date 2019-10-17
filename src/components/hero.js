@@ -43,32 +43,12 @@ const HeroImage = ({ children }) => (
             backgroundAttachment: 'fixed',
             clipPath: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)',
           }}
-          // Title get's passed to both container and noscriptImg.
-          title="gbitest"
-          // You are able to set a classId and style by wrapper (see below or
           // https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles):
-          // classId="gbi"
-          // style={{
-          //   // Defaults are overwrite-able by setting one of the following:
-          //   // backgroundSize: '',
-          //   // backgroundPosition: '',
-          //   // backgroundRepeat: '',
-          // }}
-          // To "force" the classic fading in of every image (especially on
-          // imageData change for fluid / fixed) by setting `soft` on `fadeIn`:
-          // fadeIn={`soft`}
-          // To be able to use stacking context changing elements yourself,
-          // set this to true to disable the "opacity hack":
-          // preserveStackingContext={true}
-          // You can "safely" (look them up beforehand ; ) add other props:
-          id="gbitest"
-          role="img"
-          aria-label="gbitest"
+          id="hero_image"
+          fadeIn="soft"
         >
           <HeroContainer>
-            <div className="container align-text-left">
-              {children}
-            </div>
+            <div className="container align-text-left">{children}</div>
           </HeroContainer>
         </BackgroundImage>
       );
@@ -81,7 +61,7 @@ const HeroContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 90vh;
-  box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, .3);
+  box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, 0.3);
 `;
 
 export default HeroImage;

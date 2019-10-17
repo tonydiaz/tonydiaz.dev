@@ -4,7 +4,7 @@ import { SkillsImageOne, SkillsImageTwo, SkillsImageThree } from '../image';
 import { styled } from 'linaria/react';
 
 const SkillsSection = () => (
-  <section className="bg-light">
+  <section className="bg-light" id="skills">
     <div className="container">
       <h2 className="title">Skills</h2>
       <div className="row mobile-lg">

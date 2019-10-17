@@ -7,6 +7,7 @@ import SEO from '../components/seo';
 import HeroImage from '../components/hero';
 import AboutSection from '../components/Homepage/about_section';
 import SkillsSection from '../components/Homepage/skills_section';
+import PortfolioSection from '../components/Homepage/portfolio_section';
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -21,16 +22,7 @@ const IndexPage = ({ data }) => (
     </HeroImage>
     <AboutSection />
     <SkillsSection />
-    <section>
-      <div className="container">
-        <h2 className="title">Portfolio</h2>
-        <div className="center-text">
-          <button type="button" className="primary">
-            Button
-          </button>
-        </div>
-      </div>
-    </section>
+    <PortfolioSection />
   </Layout>
 );
 

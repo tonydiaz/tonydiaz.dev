@@ -1,9 +1,9 @@
 import React from 'react';
 
-const AboutSection = () => (
-  <section className="bg-white" id="about">
+const PortfolioSection = () => (
+  <section className="bg-white section" id="portfolio">
     <div className="container">
-      <h2 className="title">About Me</h2>
+      <h2 className="title">Portfolio</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula eget dolor. Aenean massa.
@@ -34,4 +34,4 @@ const AboutSection = () => (
   </section>
 );
 
-export default AboutSection;
+export default PortfolioSection;
