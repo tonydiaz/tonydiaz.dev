@@ -66,9 +66,9 @@ const HeroImage = ({ children }) => (
           aria-label="gbitest"
         >
           <HeroContainer>
-            <HeroContent className="container">
+            <div className="container align-text-left">
               {children}
-            </HeroContent>
+            </div>
           </HeroContainer>
         </BackgroundImage>
       );
@@ -82,10 +82,6 @@ const HeroContainer = styled.div`
   justify-content: center;
   height: 90vh;
   box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, .3);
-`;
-
-const HeroContent = styled.div`
-  text-align: left;
 `;
 
 export default HeroImage;
