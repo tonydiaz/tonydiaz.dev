@@ -164,7 +164,6 @@ button,
 .button {
   padding: 8px 24px;
   border: none;
-  margin: 4px;
   border-radius: 50px;
   text-transform: uppercase;
   cursor: pointer;
