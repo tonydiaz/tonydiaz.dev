@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => {
       <div className="container">
         <div className="navbar-content">
           <div className="navbar-left">
-            <h2>{siteTitle}</h2>
+            <h2 className="navbar-title">{siteTitle}</h2>
           </div>
           <div className="navbar-right">
             <ul className="menu">
