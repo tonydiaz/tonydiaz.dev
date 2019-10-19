@@ -1,6 +1,5 @@
 import React from 'react';
 import { styled } from 'linaria/react';
-import {SlowBuffer} from 'buffer';
 
 const skills = [
   {
@@ -61,61 +60,98 @@ const skills = [
   {
     name: 'MySQL',
     skillLevel: 40,
-    tags: 'backend',
+    tags: ['backend'],
   },
 ];
 
+const tools = skills.filter((skill) => {
+  for (let i = 0; i < skill.tags.length; i++) {
+    if (skill.tags[i] === 'tools') {
+      return true;
+    }
+  }
+});
+
+console.log(tools);
+
 const SkillsSection = () => (
-  <section className="bg-light" id="skills">
+  <section className="bg-white" id="skills">
     <div className="container">
       <h2 className="title">Skills</h2>
-      <div className="container">
-        <div className="row">
-          <div className="col col-5">
-            <p>
-              Flsakdfjs lskjo i jl, I kjasdfl nkj ljksj df. I kslfdl nh fls.
-              Ekfliusj l kljsfdlk, klsdjfljf, lksdjflkjflsdf - sdfkj. lskdjfs
-              lkjfasdljfsd. KJDFLjlkj, lksjdaflkjdf.
-            </p>
-          </div>
-          <div className="col col-6 offset-1">
-            {skills.map(skill => (
-              <ProgressContainer>
-                <ProgressTitle>{skill.name}</ProgressTitle>
-                <Progress>
-                  <ProgressBar value={skill.skillLevel} />
-                </Progress>
-              </ProgressContainer>
-            ))}
-          </div>
+      <div className="row">
+        <div className="col col-6">
+          <SkillWrapper>
+            <h2>Languages</h2>
+            {skills
+              .filter((skill) => {
+                for (let i = 0; i < skill.tags.length; i++) {
+                  if (skill.tags[i] !== 'tools') {
+                    return true;
+                  }
+                }
+              })
+              .map(skill => (
+                <ProgressContainer>
+                  <ProgressTitle>{skill.name}</ProgressTitle>
+                  <Progress>
+                    <ProgressBar value={skill.skillLevel} />
+                  </Progress>
+                </ProgressContainer>
+              ))}
+          </SkillWrapper>
+        </div>
+        <div className="col col-6">
+          <SkillWrapper>
+            <h2>Tools</h2>
+            {skills
+              .filter((skill) => {
+                for (let i = 0; i < skill.tags.length; i++) {
+                  if (skill.tags[i] === 'tools') {
+                    return true;
+                  }
+                }
+              })
+              .map(skill => (
+                <ProgressContainer>
+                  <ProgressTitle>{skill.name}</ProgressTitle>
+                  <Progress>
+                    <ProgressBar value={skill.skillLevel} />
+                  </Progress>
+                </ProgressContainer>
+              ))}
+          </SkillWrapper>
         </div>
       </div>
     </div>
   </section>
 );
 
+const SkillWrapper = styled.div`
+  padding: 0 12px;
+`;
+
 const ProgressContainer = styled.div`
-  display: flex;
-  flex: 1 1 0;
-  align-items: center;
-  margin-bottom: 10px;
+  // display: flex;
+  // flex: 1 1 0;
+  // align-items: center;
+  margin-bottom: 16px;
 `;
 
 const Progress = styled.div`
-  background: white;
+  background: #eee;
   border-radius: 50px;
-  flex: 1 1 0;
-  max-width: 70%;
+  // flex: 1 1 0;
+  // max-width: 70%;
   margin-left: auto;
 `;
 
 const ProgressTitle = styled.div`
-  margin-right: 8px;
+  margin-bottom: 8px;
   font-weight: bold;
 `;
 
 const ProgressBar = styled.div`
-  height: 22.5px;
+  height: 18px;
   width: ${props => props.value}%;
   background: orange;
   border-radius: 50px;

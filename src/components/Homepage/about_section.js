@@ -1,8 +1,8 @@
 import React from 'react';
 
 const AboutSection = () => (
-  <section className="bg-white" id="about">
-    <div className="container">
+  <section className="bg-light" id="about">
+    <div className="container center-text">
       <h2 className="title">About Me</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
@@ -27,7 +27,7 @@ const AboutSection = () => (
       </p>
       <div className="center-text">
         <button type="button" className="primary">
-          Button
+          Contact Me
         </button>
       </div>
     </div>

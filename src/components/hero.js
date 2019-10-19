@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { styled } from 'linaria/react';
 import Img from 'gatsby-image';
@@ -14,58 +14,87 @@ import BackgroundImage from 'gatsby-background-image';
  * @return {*}
  * @constructor
  */
-const HeroImage = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        desktop: file(relativePath: { eq: "hero_image.jpeg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+const HeroImage = ({ children }) => {
+  const [scrollValue, setScrollValue] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScrollValue(window.scrollY);
+    });
+  });
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          desktop: file(relativePath: { eq: "hero_image.jpeg" }) {
+            childImageSharp {
+              fluid(quality: 90, maxWidth: 4160) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
             }
           }
         }
-      }
-    `}
-    render={(data) => {
-      // Extract imageData.
-      const imageData = data.desktop.childImageSharp.fluid;
-      return (
-        <BackgroundImage
-          Tag="section"
-          // To style via external CSS see layout.css last examples:
-          // className="test"
-          fluid={imageData}
-          backgroundColor="#040e18"
-          style={{
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
-            clipPath: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)',
-          }}
-          // https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles):
-          id="hero_image"
-          fadeIn="soft"
-        >
-          <HeroContainer>
-            <ChildContainer className="container">{children}</ChildContainer>
-          </HeroContainer>
-        </BackgroundImage>
-      );
-    }}
-  />
-);
+      `}
+      render={(data) => {
+        // Extract imageData.
+        const imageData = data.desktop.childImageSharp.fluid;
+        return (
+          <MainWrapper scroll={scrollValue}>
+            <BackgroundImage
+              Tag="section"
+              // To style via external CSS see layout.css last examples:
+              // className="test"
+              fluid={imageData}
+              backgroundColor="#040e18"
+              style={{
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundAttachment: 'fixed',
+                // top: -scrollValue,
+                // clipPath: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)',
+              }}
+              // https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles):
+              id="hero_image"
+              fadeIn="soft"
+            >
+              <HeroContainer>
+                <ChildContainer
+                  style={{
+                    marginTop: scrollValue * 1.1,
+                  }}
+                  className="container"
+                >
+                  {children}
+                </ChildContainer>
+              </HeroContainer>
+            </BackgroundImage>
+          </MainWrapper>
+        );
+      }}
+    />
+  );
+};
+
+const MainWrapper = styled.div`
+overflow: hidden;
+  & *::before {
+    transform: scale(${props => (props.scroll !== 0 ? 1 + (props.scroll * 0.01) / 10 : 1)});
+  }
+`;
 
 const HeroContainer = styled.div`
   display: flex;
   align-items: center;
-  height: 120vh;
+  height: 100vh;
+  max-height: 100vh;
   box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, 0.3);
   text-align: center;
+  overflow: hidden;
 `;
 
 const ChildContainer = styled.div`
-  padding-bottom: 20vh;
+  // padding-bottom: 20vh'
 `;
 
 export default HeroImage;

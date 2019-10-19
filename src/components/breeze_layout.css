@@ -110,18 +110,18 @@ progress::-moz-progress-bar {
   --space-xxl: 72px;
 
   --primary: rgb(37, 72, 100);
-  --button-color: #e97a13;
-  --button-color-light: #f39033;
+  --button-color: orange;
+  --button-color-light: rgb(255, 180, 42);
 }
 
 #hero_image {
   background-size: 'cover';
   background-repeat: 'no-repeat';
   background-attachment: 'fixed';
-  clip-path: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)';
+  /* clip-path: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)'; */
   z-index: 9;
 }
-
+/* 
 @media (min-width: 769px) {
   #hero_image {
     clip-path: polygon(100% 0, 100% 83%, 25% 100%, 0 87%, 0 0) !important;
@@ -131,7 +131,7 @@ progress::-moz-progress-bar {
   #hero_image {
     clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 87%, 0 0) !important;
   }
-}
+} */
 .hero_title {
   color: white;
   font-weight: 500;
@@ -153,6 +153,7 @@ progress::-moz-progress-bar {
   max-width: 400px;
   border-bottom: 2px solid var(--primary);
   text-align: center;
+  font-size: 36px;
 }
 button,
 a.button {
