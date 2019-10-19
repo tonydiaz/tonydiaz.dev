@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
         <button className="secondary transparent">Button</button>
       </div>
     </HeroImage>
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header />
     <AboutSection />
     <SkillsSection />
     <PortfolioSection />

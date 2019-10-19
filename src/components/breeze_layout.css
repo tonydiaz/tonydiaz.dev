@@ -81,37 +81,6 @@
   z-index: 9;
 }
 
-#about {
-  margin-top: -136px;
-  margin-bottom: 136;
-  z-index: 1;
-  padding: 136px 0;
-}
-
-#skills {
-  position: relative;
-  padding-top: 32px;
-}
-
-#skills .container {
-  padding-top: 0 !important;
-}
-
-#skills::before {
-  display: block;
-  content: '';
-  /* background-color: var(--button-color); */
-  /* transform: rotate(167deg) skew(67deg);
-  -webkit-transform: rotate(167deg) skew(67deg); */
-  position: absolute;
-  top: -100px;
-  z-index: 100;
-  border-bottom: 100px solid #f7f7f7;
-  border-left: 30vw solid transparent;
-  border-right: 70vw solid transparent;
-  left: 0;
-}
-
 @media (min-width: 769px) {
   #hero_image {
     clip-path: polygon(100% 0, 100% 83%, 25% 100%, 0 87%, 0 0) !important;
@@ -121,10 +90,6 @@
   #hero_image {
     clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 87%, 0 0) !important;
   }
-}
-.hero_content {
-  text-align: left;
-  width: 100%;
 }
 .hero_title {
   color: white;
@@ -1777,9 +1742,12 @@ p {
  ---------------------------------------------------------------*/
 
 #navbar {
-  position: absolute;
   width: 100% !important;
   z-index: 999 !important;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 20px 40px -25px rgb(78, 78, 78);
 }
 
 #navbar .container {
@@ -1789,19 +1757,16 @@ p {
 
 #navbar.fixed {
   position: fixed;
+  top: 0;
   box-shadow: 0 20px 40px -25px rgb(78, 78, 78);
 }
 
-#navbar.fixed .navbar-content {
-  padding: 4px 0;
-}
-
-#navbar.fixed h2 {
+#navbar h2 {
   font-size: 26px;
 }
 
 .navbar-content {
-  padding: 15px 0;
+  padding: 4px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1819,12 +1784,22 @@ p {
   width: fit-content;
 }
 
-.menu {
+.navbar-left .menu {
   display: flex;
   list-style: none;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin: 0;
+  padding: 0;
+}
+
+.navbar-right .menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-item {

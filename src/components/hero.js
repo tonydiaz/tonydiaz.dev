@@ -48,7 +48,7 @@ const HeroImage = ({ children }) => (
           fadeIn="soft"
         >
           <HeroContainer>
-            <div className="container align-text-left">{children}</div>
+            <div className="container">{children}</div>
           </HeroContainer>
         </BackgroundImage>
       );
@@ -59,9 +59,9 @@ const HeroImage = ({ children }) => (
 const HeroContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 90vh;
   box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, 0.3);
+  text-align: center;
 `;
 
 export default HeroImage;
