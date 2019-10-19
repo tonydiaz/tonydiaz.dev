@@ -16,10 +16,7 @@ const IndexPage = ({ data }) => (
     <HeroImage>
       <h1 className="hero_title">Jarod Peachey</h1>
       <h4 className="hero_subtitle">Front End Web Developer and Designer</h4>
-      <div className="hero_buttons">
-        <button className="primary">Button</button>
-        <button className="secondary transparent">Button</button>
-      </div>
+      <a href="#about" className="button primary">Get to Know Me</a>
     </HeroImage>
     <Header />
     <AboutSection />

@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => {
   return (
     <header
       id="navbar"
-      className={headerScrolled ? 'fixed bg-primary' : 'bg-primary'}
+      className={headerScrolled ? 'fixed bg-primary' : 'bg-transparent'}
     >
       <div className="container">
         <div className="navbar-content">
