@@ -8,13 +8,10 @@ import HeroImage from '../components/hero';
 import AboutSection from '../components/Homepage/about_section';
 import SkillsSection from '../components/Homepage/skills_section';
 import PortfolioSection from '../components/Homepage/portfolio_section';
-import Helmet from 'react-helmet';
+import Header from '../components/header';
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Helmet>
-      {/* <link rel="preload" as="font" href="../../fonts/raleway-regular-webfont.woff2" type="font/woff2" crossOrigin="anonymous" /> */}
-    </Helmet>
     <SEO title="Home" />
     <HeroImage>
       <h1 className="hero_title">Jarod Peachey</h1>
@@ -24,6 +21,7 @@ const IndexPage = ({ data }) => (
         <button className="secondary transparent">Button</button>
       </div>
     </HeroImage>
+    <Header siteTitle={data.site.siteMetadata.title} />
     <AboutSection />
     <SkillsSection />
     <PortfolioSection />

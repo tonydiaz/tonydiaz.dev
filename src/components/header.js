@@ -18,23 +18,30 @@ const Header = ({ siteTitle }) => {
   return (
     <header
       id="navbar"
-      className={headerScrolled ? 'fixed bg-primary' : 'bg-transparent'}
+      className={headerScrolled ? 'fixed bg-primary' : 'bg-primary'}
     >
       <div className="container">
         <div className="navbar-content">
           <div className="navbar-left">
-            <h2 className="navbar-title">{siteTitle}</h2>
+            <ul className="menu">
+              <li className="menu-item">
+                <a href="#about">About</a>
+              </li>
+              <li className="menu-item">
+                <a href="#skills">Skills</a>
+              </li>
+              <li className="menu-item">
+                <a href="#portfolio">Portfolio</a>
+              </li>
+            </ul>
           </div>
           <div className="navbar-right">
             <ul className="menu">
               <li className="menu-item">
-                <a href="/">Link</a>
+                <a href="/">Github</a>
               </li>
               <li className="menu-item">
-                <a href="/">Link</a>
-              </li>
-              <li className="menu-item">
-                <a href="/">Link</a>
+                <a href="/">Linkedin</a>
               </li>
             </ul>
           </div>
