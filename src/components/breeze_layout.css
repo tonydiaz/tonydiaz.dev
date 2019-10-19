@@ -98,25 +98,15 @@
 .hero_title {
   color: white;
   font-weight: 500;
-  font-size: 56px !important;
+  font-size: 52px !important;
   margin-top: 0;
 }
 .hero_subtitle {
-  color: white;
+  color: rgba(255, 255, 255, 0.767);
   margin-top: 0;
-  font-size: 32px;
-  font-weight: 300;
+  font-size: 26px;
+  font-weight: 500;
 }
-.hero_buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 48px;
-  position: relative;
-}
-
 .title {
   padding-bottom: 20px;
   text-transform: uppercase;
@@ -127,7 +117,6 @@
   border-bottom: 2px solid var(--primary);
   text-align: center;
 }
-
 button,
 a.button {
   padding: 10px 26px;
@@ -167,7 +156,11 @@ button.primary,
   color: white;
   padding: 14px 28px;
 }
-button.primary::before,
+button.primary:hover, .button.primary:hover {
+  box-shadow: inset 100px 50px 200px -100px rgba(255, 255, 255, 0.5);
+  transition-duration: .5s;
+}
+/* button.primary::before,
 .button.primary::before {
   content: '';
   position: absolute;
@@ -182,7 +175,7 @@ button.primary::before,
 button.primary:hover::before,
 .button.primary:hover::before {
   right: 0;
-}
+} */
 button.primary.outlined,
 button.primary.transparent,
 .button.primary.outlined,
@@ -289,6 +282,7 @@ body {
 html {
   box-sizing: border-box;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -1788,8 +1782,8 @@ p {
   padding: 4px;
 }
 
-#navbar h2 {
-  font-size: 26px;
+#navbar .navbar-title {
+  font-size: 28px;
 }
 
 .navbar-content {
@@ -1843,11 +1837,14 @@ p {
   box-shadow: none;
   color: inherit;
   width: 100%;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.menu-item:hover > a {
-  color: var(--primary);
-  transition-duration: 0s;
+.menu-item:hover {
+  /* background: rgba(255, 255, 255, 0.466); */
+  box-shadow: inset 100px 50px 200px -100px rgba(255, 255, 255, 0.5);
+  transition-duration: .5s;
 }
 
 .menu > .menu-item > .menu {

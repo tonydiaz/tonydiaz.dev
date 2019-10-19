@@ -23,6 +23,9 @@ const Header = ({ siteTitle }) => {
       <div className="container">
         <div className="navbar-content">
           <div className="navbar-left">
+            <h2 className="navbar-title">Jarod Peachey</h2>
+          </div>
+          <div className="navbar-right">
             <ul className="menu">
               <li className="menu-item">
                 <a href="#about">About</a>
@@ -32,16 +35,6 @@ const Header = ({ siteTitle }) => {
               </li>
               <li className="menu-item">
                 <a href="#portfolio">Portfolio</a>
-              </li>
-            </ul>
-          </div>
-          <div className="navbar-right">
-            <ul className="menu">
-              <li className="menu-item">
-                <a href="/">Github</a>
-              </li>
-              <li className="menu-item">
-                <a href="/">Linkedin</a>
               </li>
             </ul>
           </div>
