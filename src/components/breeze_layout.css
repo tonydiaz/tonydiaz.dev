@@ -108,7 +108,6 @@ progress::-moz-progress-bar {
   --space-lg: 48px;
   --space-xl: 64px;
   --space-xxl: 72px;
-
   --primary: rgb(37, 72, 100);
   --button-color: orange;
   --button-color-light: rgb(255, 180, 42);
