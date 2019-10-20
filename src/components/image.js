@@ -28,6 +28,13 @@ function withImageData (WrappedComponent) {
               }
             }
           }
+          caltrack: file(relativePath: { eq: "caltrack.PNG" }) {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       `}
       render={data => <WrappedComponent {...props} imageData={data} />}
@@ -44,5 +51,8 @@ const SkillsImageTwo = withImageData(props => (
 const SkillsImageThree = withImageData(props => (
   <Img fluid={props.imageData.skillsImageThree.childImageSharp.fluid} />
 ));
+const CalTrackImage = withImageData(props => (
+  <Img fluid={props.imageData.caltrack.childImageSharp.fluid} />
+));
 
-export { SkillsImageOne, SkillsImageTwo, SkillsImageThree };
+export { SkillsImageOne, SkillsImageTwo, SkillsImageThree, CalTrackImage };

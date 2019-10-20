@@ -75,7 +75,7 @@ const tools = skills.filter((skill) => {
 console.log(tools);
 
 const SkillsSection = () => (
-  <section className="bg-white" id="skills">
+  <section className="bg-light" id="skills">
     <div className="container">
       <h2 className="title">Skills</h2>
       <div className="row">
@@ -138,7 +138,7 @@ const ProgressContainer = styled.div`
 `;
 
 const Progress = styled.div`
-  background: #eee;
+  background: #ddd;
   border-radius: 50px;
   // flex: 1 1 0;
   // max-width: 70%;
