@@ -121,17 +121,6 @@ progress::-moz-progress-bar {
   /* clip-path: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)'; */
   z-index: 9;
 }
-/* 
-@media (min-width: 769px) {
-  #hero_image {
-    clip-path: polygon(100% 0, 100% 83%, 25% 100%, 0 87%, 0 0) !important;
-  }
-}
-@media (min-width: 1220px) {
-  #hero_image {
-    clip-path: polygon(100% 0, 100% 73%, 25% 100%, 0 87%, 0 0) !important;
-  }
-} */
 .hero_title {
   color: white;
   font-weight: 500;
@@ -155,125 +144,108 @@ progress::-moz-progress-bar {
   text-align: center;
   font-size: 36px;
 }
+a {
+  margin: 0;
+  text-decoration: none;
+}
 button,
 a.button {
-  padding: 10px 26px;
-  border: none;
-  border-radius: 50px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition-duration: 0.5s;
-  letter-spacing: 1.1px;
-  font-size: 14px;
-  font-weight: 400;
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  margin: 0 8px;
-  outline: none !important;
-  display: block;
-  text-decoration: none;
-  width: fit-content;
-  margin: 0 auto;
+  padding: 10px 26px !important;
+  border: none !important;
+  border-radius: 50px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition-duration: 0.5s !important;
+  letter-spacing: 1.1px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+  position: relative !important;
+  margin: 0 8px !important;
+  outline: none !important !important;
 }
-button::after,
-a.button::after {
-  clip: none !important;
+button::before, a.button::before {
+  clip: none !important !important;
+  z-index: -100 !important;
 }
 button:hover,
 a.button:hover {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 button:active,
 a.button:active {
-  transform: scale(1.05);
+  transform: scale(1.05) !important;
 }
-button.primary,
-.button.primary {
-  background: var(--button-color);
-  color: white;
-  padding: 14px 28px;
+button.primary, a.button.primary {
+  background: var(--button-color) !important;
+  color: white !important;
+  padding: 14px 28px !important;
 }
-button.primary:hover, .button.primary:hover {
-  box-shadow: inset 100px 50px 200px -100px rgba(255, 255, 255, 0.5);
-  transition-duration: .5s;
+button.primary::before, a.button.primary::before {
+  content: '' !important;
+  position: absolute !important;
+  background: var(--button-color-light) !important;
+  top: 0 !important;
+  right: 100% !important;
+  z-index: -1 !important;
+  transition: 0.2s ease-in-out !important;
+  width: 101% !important;
+  height: 101% !important;
 }
-/* button.primary::before,
-.button.primary::before {
-  content: '';
-  position: absolute;
-  background: var(--button-color-light);
-  top: 0;
-  right: 100%;
-  z-index: -1;
-  transition: 0.2s ease-in-out;
-  width: 101%;
-  height: 101%;
+button.primary:hover::before, a.button.primary:hover::before {
+  right: 0 !important;
 }
-button.primary:hover::before,
-.button.primary:hover::before {
-  right: 0;
-} */
 button.primary.outlined,
-button.primary.transparent,
-.button.primary.outlined,
-.button.primary.transparent {
-  background: transparent;
-  color: var(--button-color);
-  border: 2px solid var(--button-color);
-  padding: 12px 26px;
+button.primary.transparent, a.button.primary.outlined,
+a.button.primary.transparent {
+  background: transparent !important;
+  color: var(--button-color) !important;
+  border: 2px solid var(--button-color) !important;
+  padding: 12px 26px !important;
 }
-button.primary.outlined:hover,
-.button.primary.outlined:hover {
-  color: white;
-  border: 2px solid rgb(184, 95, 37);
+button.primary.outlined:hover, a.button.primary.outlined:hover {
+  color: white !important;
+  border: 2px solid rgb(184, 95, 37) !important;
 }
-button.primary.transparent::before,
-.button.primary.transparent::before {
-  background: rgba(37, 56, 72, 0.322);
+button.primary.transparent::before, a.button.primary.transparent::before {
+  background: rgba(37, 56, 72, 0.322) !important;
 }
 
-button.secondary,
-.button.secondary {
-  background: white;
-  color: #333;
+button.secondary, a.button.secondary {
+  background: white !important;
+  color: #333 !important;
 }
-button.secondary::before,
-.button.secondary::before {
-  content: '';
-  position: absolute;
-  background: rgb(240, 240, 240);
-  top: 0;
-  right: 100%;
-  z-index: -1;
-  transition: 0.2s ease-in-out;
-  width: 101%;
-  height: 101%;
+button.secondary::before, a.button.secondary::before {
+  content: '' !important;
+  position: absolute !important;
+  background: var(--button-color-light) !important;
+  top: 0 !important;
+  right: 100% !important;
+  z-index: -1 !important;
+  transition: 0.2s ease-in-out !important;
+  width: 101% !important;
+  height: 101% !important;
 }
-button.secondary:hover::before,
-.button.secondary:hover::before {
-  right: 0;
+button.secondary:hover::before, a.button.secondary:hover::before {
+  right: 0 !important;
 }
 button.secondary.outlined,
-button.secondary.transparent,
-.button.secondary.outlined,
-.button.secondary.transparent {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 12px 26px;
+button.secondary.transparent, a.button.secondary.outlined,
+a.button.secondary.transparent {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+  padding: 12px 26px !important;
 }
-button.secondary.outlined:hover::before,
-.button.secondary.outlined:hover::before {
-  background: white;
+button.secondary.outlined:hover::before, a.button.secondary.outlined:hover::before {
+  background: white !important;
 }
-button.secondary.outlined:hover,
-.button.secondary.outlined:hover {
-  color: #333;
+button.secondary.outlined:hover, a.button.secondary.outlined:hover {
+  color: #333 !important;
 }
-button.secondary.outlined:hover,
-.button.secondary.outlined:hover {
-  background: rgba(255, 255, 255, 0.185);
+button.secondary.transparent::before, a.button.secondary.transparent::before {
+  background: rgba(255, 255, 255, 0.185) !important;
 }
 
 /* CARD
