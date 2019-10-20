@@ -8,88 +8,87 @@ const PortfolioSection = () => (
       <h2 className="title">Portfolio</h2>
       <div className="row">
         <div className="col col-6 desktop-col-4">
-          <a href="/">
-            <PortfolioWrapper>
+          <PortfolioWrapper>
+            <a href="/">
               <PortfolioImage>
                 <CalTrackImage />
               </PortfolioImage>
-              <PortfolioTitle>CalTrack</PortfolioTitle>
-              <PortfolioDescription>
-                CalTrack is an app I built using React, Redux and Material UI.
-                It allows multiple users to sign up and track their meals and
-                workouts. The data is collected and their calories gained/lost
-                are displayed on the dashboard.
-              </PortfolioDescription>
-              <PortfolioSkills>
-                <PortfolioSkill>HTML</PortfolioSkill>
-                <PortfolioSkill>CSS</PortfolioSkill>
-                <PortfolioSkill>React</PortfolioSkill>
-              </PortfolioSkills>
-            </PortfolioWrapper>
-          </a>
+            </a>
+            <PortfolioTitle>CalTrack</PortfolioTitle>
+            <PortfolioDescription>
+              CalTrack is an app I built using React, Redux and Material UI. It
+              allows multiple users to sign up and track their meals and
+              workouts. The data is collected and their calories gained/lost are
+              displayed on the dashboard.
+            </PortfolioDescription>
+            <PortfolioSkills>
+              <PortfolioSkill>HTML</PortfolioSkill>
+              <PortfolioSkill>CSS</PortfolioSkill>
+              <PortfolioSkill>React</PortfolioSkill>
+            </PortfolioSkills>
+          </PortfolioWrapper>
         </div>
         <div className="col col-6 desktop-col-4">
-          <a href="/">
-            <PortfolioWrapper>
+          <PortfolioWrapper>
+            <a href="/">
               <PortfolioImage>
                 <CalTrackImage />
               </PortfolioImage>
-              <PortfolioTitle>CalTrack</PortfolioTitle>
-              <PortfolioDescription>
-                CalTrack is an app I built using React, Redux and Material UI.
-                It allows multiple users to sign up and track their meals and
-                workouts. The data is collected and their calories gained/lost
-                are displayed on the dashboard.
-              </PortfolioDescription>
-              <PortfolioSkills>
-                <PortfolioSkill>HTML</PortfolioSkill>
-                <PortfolioSkill>CSS</PortfolioSkill>
-                <PortfolioSkill>React</PortfolioSkill>
-              </PortfolioSkills>
-            </PortfolioWrapper>
-          </a>
+            </a>
+            <PortfolioTitle>CalTrack</PortfolioTitle>
+            <PortfolioDescription>
+              CalTrack is an app I built using React, Redux and Material UI. It
+              allows multiple users to sign up and track their meals and
+              workouts. The data is collected and their calories gained/lost are
+              displayed on the dashboard.
+            </PortfolioDescription>
+            <PortfolioSkills>
+              <PortfolioSkill>HTML</PortfolioSkill>
+              <PortfolioSkill>CSS</PortfolioSkill>
+              <PortfolioSkill>React</PortfolioSkill>
+            </PortfolioSkills>
+          </PortfolioWrapper>
         </div>
         <div className="col col-6 desktop-col-4">
-          <a href="/">
-            <PortfolioWrapper>
+          <PortfolioWrapper>
+            <a href="/">
               <PortfolioImage>
                 <CalTrackImage />
               </PortfolioImage>
-              <PortfolioTitle>CalTrack</PortfolioTitle>
-              <PortfolioDescription>
-                CalTrack is an app I built using React, Redux and Material UI.
-                It allows multiple users to sign up and track their meals and
-                workouts. The data is collected and their calories gained/lost
-                are displayed on the dashboard.
-              </PortfolioDescription>
-              <PortfolioSkills>
-                <PortfolioSkill>HTML</PortfolioSkill>
-                <PortfolioSkill>CSS</PortfolioSkill>
-                <PortfolioSkill>React</PortfolioSkill>
-              </PortfolioSkills>
-            </PortfolioWrapper>
-          </a>
+            </a>
+            <PortfolioTitle>CalTrack</PortfolioTitle>
+            <PortfolioDescription>
+              CalTrack is an app I built using React, Redux and Material UI. It
+              allows multiple users to sign up and track their meals and
+              workouts. The data is collected and their calories gained/lost are
+              displayed on the dashboard.
+            </PortfolioDescription>
+            <PortfolioSkills>
+              <PortfolioSkill>HTML</PortfolioSkill>
+              <PortfolioSkill>PHP</PortfolioSkill>
+              <PortfolioSkill>React</PortfolioSkill>
+            </PortfolioSkills>
+          </PortfolioWrapper>
         </div>
         <div className="col col-6 desktop-col-4">
-          <a href="/">
-            <PortfolioWrapper>
+          <PortfolioWrapper>
+            <a href="/">
               <PortfolioImage>
                 <CalTrackImage />
               </PortfolioImage>
-              <PortfolioTitle>CalTrack</PortfolioTitle>
-              <PortfolioDescription>
-                CalTrack is an app I built using React, Redux and Material UI.
-                It allows multiple users to sign up and track their meals and
-                workouts. The data is collected and their calories gained/lost
-                are displayed on the dashboard.
-              </PortfolioDescription>
-              <PortfolioSkills>
-                <PortfolioSkill>HTML</PortfolioSkill>
-                <PortfolioSkill>CSS</PortfolioSkill>
-                <PortfolioSkill>React</PortfolioSkill>
-              </PortfolioSkills>
-            </PortfolioWrapper>
-          </a>
+            </a>
+            <PortfolioTitle>CalTrack</PortfolioTitle>
+            <PortfolioDescription>
+              CalTrack is an app I built using React, Redux and Material UI. It
+              allows multiple users to sign up and track their meals and
+              workouts. The data is collected and their calories gained/lost are
+              displayed on the dashboard.
+            </PortfolioDescription>
+            <PortfolioSkills>
+              <PortfolioSkill>HTML</PortfolioSkill>
+              <PortfolioSkill>CSS</PortfolioSkill>
+            </PortfolioSkills>
+          </PortfolioWrapper>
         </div>
       </div>
     </div>
@@ -110,7 +109,7 @@ const PortfolioImage = styled.div`
     display: block;
     min-height: 200px;
     width: 100%;
-    content: "";
+    content: '';
     z-index: 999;
     position: absolute;
   }
@@ -118,7 +117,7 @@ const PortfolioImage = styled.div`
     display: block;
     min-height: 200px;
     width: 100%;
-    content: "View Project";
+    content: 'View Project';
     display: flex;
     align-items: center;
     color: white;
@@ -142,6 +141,7 @@ const PortfolioDescription = styled.div`
   text-align: center;
   font-weight: 500;
   font-size: 16px;
+  coor: #666;
 `;
 
 const PortfolioSkills = styled.div`
