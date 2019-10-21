@@ -1,5 +1,6 @@
 import React from 'react';
 import { styled } from 'linaria/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const skills = [
   {
@@ -81,8 +82,10 @@ const SkillsSection = () => (
       <div className="row">
         <div className="col col-6 desktop-col-3">
           <MainSkill>
-            <MainSkillIcon>{'</>'}</MainSkillIcon>
-            <MainSkillTitle>HTML</MainSkillTitle>
+            <MainSkillIcon>
+              <FontAwesomeIcon icon="mobile-alt" />
+            </MainSkillIcon>
+            <MainSkillTitle>Responsive Design</MainSkillTitle>
             <MainSkillRating>
               <Star />
               <Star />
@@ -98,8 +101,8 @@ const SkillsSection = () => (
         </div>
         <div className="col col-6 desktop-col-3">
           <MainSkill>
-            <MainSkillIcon>{'{...}'}</MainSkillIcon>
-            <MainSkillTitle>CSS</MainSkillTitle>
+            <MainSkillIcon><FontAwesomeIcon icon="code" /></MainSkillIcon>
+            <MainSkillTitle>Code Quality</MainSkillTitle>
             <MainSkillRating>
               <Star />
               <Star />
@@ -115,8 +118,8 @@ const SkillsSection = () => (
         </div>
         <div className="col col-6 desktop-col-3">
           <MainSkill>
-            <MainSkillIcon>{'JS'}</MainSkillIcon>
-            <MainSkillTitle>Javascript</MainSkillTitle>
+            <MainSkillIcon><FontAwesomeIcon icon="code-branch" /></MainSkillIcon>
+            <MainSkillTitle>Maintainability</MainSkillTitle>
             <MainSkillRating>
               <Star />
               <Star />
@@ -132,8 +135,8 @@ const SkillsSection = () => (
         </div>
         <div className="col col-6 desktop-col-3">
           <MainSkill>
-            <MainSkillIcon>{'PHP'}</MainSkillIcon>
-            <MainSkillTitle>PHP</MainSkillTitle>
+            <MainSkillIcon><FontAwesomeIcon icon="rocket" /></MainSkillIcon>
+            <MainSkillTitle>Performance</MainSkillTitle>
             <MainSkillRating>
               <Star />
               <Star />
@@ -211,8 +214,8 @@ const MainSkillIcon = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 60px;
+  // font-weight: bold;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
   clip-path: polygon(22% 0%, 78% 0%, 100% 50%, 78% 100%, 22% 100%, 0% 50%);
   margin-bottom: 12px;

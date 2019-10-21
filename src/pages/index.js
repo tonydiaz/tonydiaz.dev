@@ -2,6 +2,13 @@ import React from 'react';
 // import { Link } from 'gatsby';
 // import Image from '../components/image';
 // import BackgroundImage from 'gatsby-background-image';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faMobileAlt,
+  faCode,
+  faCodeBranch,
+  faRocket,
+} from '@fortawesome/free-solid-svg-icons';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HeroImage from '../components/hero';
@@ -9,6 +16,8 @@ import AboutSection from '../components/Homepage/about_section';
 import SkillsSection from '../components/Homepage/skills_section';
 import PortfolioSection from '../components/Homepage/portfolio_section';
 import Header from '../components/header';
+
+library.add(faMobileAlt, faCode, faCodeBranch, faRocket);
 
 const IndexPage = ({ data }) => (
   <Layout>
