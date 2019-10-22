@@ -71,7 +71,7 @@ const Header = ({ siteTitle }) => {
                 className={menuOpen ? 'mobile-menu open' : 'mobile-menu'}
               >
                 <div className="mobile-menu-items">
-                  <a className="mobile-menu-item" href="#navbar">
+                  <a className="mobile-menu-item" href="#home">
                     Home
                   </a>
                   <a className="mobile-menu-item" href="#about">

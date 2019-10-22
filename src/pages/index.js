@@ -24,7 +24,7 @@ library.add(faMobileAlt, faCode, faCodeBranch, faRocket, faBars, fab);
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <HeroImage>
+    <HeroImage id="home">
       <h1 className="hero_title">Hi. I'm Jarod Peachey</h1>
       <h4 className="hero_subtitle">
         I'm Front End Web Developer focused on code quality, consistencey and
