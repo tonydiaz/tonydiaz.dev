@@ -91,7 +91,7 @@ const HeroContainer = styled.div`
 `;
 
 const ChildContainer = styled.div`
-  margin: 0;
+  margin-top: 0;
   @media (orientation:portrait) {
     margin-top: ${props => props.scrollValue * 1.1}px;
   }
