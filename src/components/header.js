@@ -25,6 +25,10 @@ const Header = ({ siteTitle }) => {
       }
     });
 
+    document.getElementById("mobile-menu").addEventListener('click', () => {
+      setMenuState(false);
+    });
+
     const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
 
     mobileMenuItems.forEach((item) => {
@@ -62,13 +66,6 @@ const Header = ({ siteTitle }) => {
               <MobileMenuIcon scrolled={headerScrolled}>
                 <FontAwesomeIcon icon="bars" id="menu-toggle" />
               </MobileMenuIcon>
-              <div
-                className={
-                  menuOpen ?
-                    'mobile-menu-placeholder open' :
-                    'mobile-menu placeholder'
-                }
-              />
               <div
                 id="mobile-menu"
                 className={menuOpen ? 'mobile-menu open' : 'mobile-menu'}
