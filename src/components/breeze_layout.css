@@ -1,139 +1,6 @@
 /* LAYOUT AND GRID SYSTEM
 --------------------------------------------------------------- */
 
-.mobile-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.185);
-  opacity: 0;
-  z-index: -1;
-  visibility: hidden;
-  height: 100vh;
-  transform-origin: 0 0;
-  transform: translateX(-120%);
-  width: 100%;
-  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
-  transition: all 0.275s 0.1s;
-}
-
-.mobile-menu.open {
-  opacity: 1;
-  z-index: 100;
-  visibility: visible;
-  transform: translateX(0%);
-  width: 140%;
-}
-.mobile-menu-placeholder {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-  background: rgba(255, 255, 255, 0);
-  opacity: 1;
-  z-index: -1;
-  visibility: hidden;
-  height: 50vh;
-  transition: visibility 0.275s 0.1s;
-}
-
-.mobile-menu-placeholder.open {
-  visibility: visible;
-}
-
-.mobile-menu::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--primary);
-  transform-origin: 0 0;
-  transform: skew(-16deg) translateX(-120%);
-  transition: all 0.275s 0.1s;
-  z-index: 0;
-}
-
-.mobile-menu.open::before {
-  transform: skew(-16deg) translateX(-40%);
-}
-
-.mobile-menu::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.45);
-  transform-origin: 0 0;
-  transform: skew(-16deg) translateX(-120%);
-  transition: all 0.325s 0.1s;
-  transition-timing-function: ease-out;
-}
-
-.mobile-menu.open::after {
-  transform: skew(-16deg) translateX(-30%);
-}
-
-.mobile-menu-placeholder::after {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.781);
-  transform-origin: 0 0;
-  transform: skew(-16deg) translateX(-120%);
-  transition: transform 0.325s 0.1s;
-  transition-timing-function: ease-out;
-}
-
-.mobile-menu-placeholder.open::after {
-  transform: skew(-16deg) translateX(-12%);
-}
-
-.mobile-menu-items {
-    position: absolute;
-      transform-origin: 0 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-    display: inline-flex;
-    flex-direction: column;
-    height: 93%; /* Should be 100%, but we have a notice message :D */
-    align-items: flex-end;
-    justify-content: center;
-    transform: translateX(-40%) skew(-16deg);
-    width: 100%;
-}
-
-.mobile-menu-item {
-    display: block;
-    font-size: 30px;
-    color: white;
-    padding: 12px 0;
-    text-align: right;
-    width: 100%;
-    padding-right: 60px;
-}
-
-.mobile-menu-item:hover {
-  box-shadow: inset -200px 50px 200px -100px rgba(255, 255, 255, 0.8);
-  transition-duration: 0.5s;
-  color: rgb(37, 72, 100);
-}
-
 @font-face {
   font-family: 'ralewaybold';
   src: url('../../fonts/raleway-bold-webfont.woff2') format('woff2'),
@@ -274,8 +141,7 @@ a.button {
   margin: 0 8px !important;
   outline: none !important;
 }
-button::before,
-a.button::before {
+button::before, a.button::before {
   clip: none !important;
   z-index: -100 !important;
   transform: scale(1) !important;
@@ -288,14 +154,12 @@ button:active,
 a.button:active {
   transform: scale(1.05) !important;
 }
-button.primary,
-a.button.primary {
+button.primary, a.button.primary {
   background: var(--button-color) !important;
   color: white !important;
   padding: 14px 28px !important;
 }
-button.primary::before,
-a.button.primary::before {
+button.primary::before, a.button.primary::before {
   content: '' !important;
   position: absolute !important;
   background: var(--button-color-light) !important;
@@ -306,36 +170,30 @@ a.button.primary::before {
   width: 101% !important;
   height: 101% !important;
 }
-button.primary:hover::before,
-a.button.primary:hover::before {
+button.primary:hover::before, a.button.primary:hover::before {
   right: 0 !important;
 }
 button.primary.outlined,
-button.primary.transparent,
-a.button.primary.outlined,
+button.primary.transparent, a.button.primary.outlined,
 a.button.primary.transparent {
   background: transparent !important;
   color: var(--button-color) !important;
   border: 2px solid var(--button-color) !important;
   padding: 12px 26px !important;
 }
-button.primary.outlined:hover,
-a.button.primary.outlined:hover {
+button.primary.outlined:hover, a.button.primary.outlined:hover {
   color: white !important;
   border: 2px solid rgb(184, 95, 37) !important;
 }
-button.primary.transparent::before,
-a.button.primary.transparent::before {
+button.primary.transparent::before, a.button.primary.transparent::before {
   background: rgba(37, 56, 72, 0.322) !important;
 }
 
-button.secondary,
-a.button.secondary {
+button.secondary, a.button.secondary {
   background: white !important;
   color: #333 !important;
 }
-button.secondary::before,
-a.button.secondary::before {
+button.secondary::before, a.button.secondary::before {
   content: '' !important;
   position: absolute !important;
   background: var(--button-color-light) !important;
@@ -346,13 +204,11 @@ a.button.secondary::before {
   width: 101% !important;
   height: 101% !important;
 }
-button.secondary:hover::before,
-a.button.secondary:hover::before {
+button.secondary:hover::before, a.button.secondary:hover::before {
   right: 0 !important;
 }
 button.secondary.outlined,
-button.secondary.transparent,
-a.button.secondary.outlined,
+button.secondary.transparent, a.button.secondary.outlined,
 a.button.secondary.transparent {
   background: transparent !important;
   color: white !important;
@@ -360,16 +216,13 @@ a.button.secondary.transparent {
   padding: 12px 26px !important;
   position: relative !important;
 }
-button.secondary.outlined:hover::before,
-a.button.secondary.outlined:hover::before {
+button.secondary.outlined:hover::before, a.button.secondary.outlined:hover::before {
   background: white !important;
 }
-button.secondary.outlined:hover,
-a.button.secondary.outlined:hover {
+button.secondary.outlined:hover, a.button.secondary.outlined:hover {
   color: #333 !important;
 }
-button.secondary.transparent::before,
-a.button.secondary.transparent::before {
+button.secondary.transparent::before, a.button.secondary.transparent::before {
   background: rgba(255, 255, 255, 0.185) !important;
 }
 
@@ -407,10 +260,10 @@ a.button.secondary.transparent::before {
 
 body {
   width: 100%;
-  height: 100%;
   overflow-x: auto;
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
   font-family: Raleway !important;
 }
 
@@ -418,8 +271,6 @@ html {
   box-sizing: border-box;
   overflow: auto;
   scroll-behavior: smooth;
-  width: 100%;
-  height: 100%;
 }
 
 p {
@@ -1969,7 +1820,7 @@ p {
 .menu-item:hover {
   /* background: rgba(255, 255, 255, 0.466); */
   box-shadow: inset 100px 50px 200px -100px rgba(255, 255, 255, 0.5);
-  transition-duration: 0.5s;
+  transition-duration: .5s;
 }
 
 /* TYPOGRAPHY

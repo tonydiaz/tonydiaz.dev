@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 import React, { useState, setState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { styled } from 'linaria/react';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 const Header = ({ siteTitle }) => {
   const [headerScrolled, setHeaderState] = useState(false);
   const [menuOpen, setMenuState] = useState(false);
 
   useEffect(() => {
-    enableBodyScroll(document.getElementById('mobile-menu'));
-
     window.addEventListener('scroll', () => {
       if (window.scrollY > 78) {
         setHeaderState(true);
@@ -21,13 +18,7 @@ const Header = ({ siteTitle }) => {
     });
 
     document.getElementById('menu-toggle').addEventListener('click', () => {
-      if (menuOpen) {
-        setMenuState(false);
-        enableBodyScroll(document.getElementById('mobile-menu'));
-      } else {
-        setMenuState(true);
-        disableBodyScroll(document.getElementById('mobile-menu'));
-      }
+      setMenuState(!menuOpen);
     });
   });
 
@@ -59,23 +50,11 @@ const Header = ({ siteTitle }) => {
               <MobileMenuIcon>
                 <FontAwesomeIcon icon="bars" id="menu-toggle" />
               </MobileMenuIcon>
-              <div className={menuOpen ? 'mobile-menu-placeholder open' : 'mobile-menu placeholder'} />
-              <div id="mobile-menu" className={menuOpen ? 'mobile-menu open' : 'mobile-menu'}>
-                <div className="mobile-menu-items">
-                  <a className="mobile-menu-item" href="/">
-                    Home
-                  </a>
-                  <a className="mobile-menu-item" href="#about">
-                    About
-                  </a>
-                  <a className="mobile-menu-item" href="#skills">
-                    Skills
-                  </a>
-                  <a className="mobile-menu-item" href="#portfolio">
-                    Portfolio
-                  </a>
-                </div>
-              </div>
+              {menuOpen ? (
+                <MobileMenu></MobileMenu>
+              ) : (
+                null
+              )}
             </div>
           </div>
         </div>
@@ -93,19 +72,10 @@ Header.defaultProps = {
 };
 
 const MobileMenuIcon = styled.div`
-  width: 20px;
-  height: 20px;
   font-size: 28px;
-  &:hover > * {
+  &:hover {
     cursor: pointer;
     transform: scale(1.2);
-  }
-  position: relative;
-  & > * {
-    position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
   }
 `;
 
