@@ -1,6 +1,140 @@
 /* LAYOUT AND GRID SYSTEM
 --------------------------------------------------------------- */
 
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgba(85, 85, 85, 0.658);
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  height: 100vh;
+  transform-origin: 0 0;
+  transform: translateX(-120%);
+  width: 100%;
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  transition: all 0.275s 0.1s;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+  transform: translateX(0%);
+  width: 140%;
+}
+/* .mobile-menu-placeholder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 999;
+  visibility: hidden;
+  transform: skew(-16%) translateX(-120%);
+  height: 50vh;
+  transition: all 0.275s 0.1s;
+  width: 20px;
+  background: orange;
+}
+
+.mobile-menu-placeholder.open {
+  visibility: visible;
+  transform: skew(-16%) translateX(-120%)
+} */
+
+.mobile-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary);
+  transform-origin: 0 0;
+  transform: skew(-16deg) translateX(-120%);
+  transition: all 0.275s 0.1s;
+  z-index: 0;
+}
+
+.mobile-menu.open::before {
+  transform: skew(-16deg) translateX(-50%);
+}
+
+.mobile-menu::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(255, 255, 255);
+  transform-origin: 0 0;
+  transform: skew(-16deg) translateX(-120%);
+  transition: all 0.325s 0.1s;
+  transition-timing-function: ease-out;
+}
+
+.mobile-menu.open::after {
+  transform: skew(-16deg) translateX(-45%);
+}
+
+/* .mobile-menu-placeholder::before {
+  content: '';
+  position: absolute;
+  z-index: 1 !important;
+  opacity: 1 !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: orange;
+  transform-origin: 0 0;
+  transform: skew(-16deg) translateX(-120%);
+  transition: transform 0.325s 0.1s;
+  transition-timing-function: ease-out;
+}
+
+.mobile-menu-placeholder.open::before {
+  transform: skew(-16deg) translateX(-12%);
+} */
+
+.mobile-menu-items {
+    position: absolute;
+      transform-origin: 0 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    display: inline-flex;
+    flex-direction: column;
+    height: 93%; /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-50%) skew(-16deg);
+    width: 100%;
+}
+
+.mobile-menu-item {
+    display: block;
+    font-size: 30px;
+    color: white;
+    padding: 12px 0;
+    text-align: right;
+    width: 100%;
+    padding-right: 60px;
+}
+
+.mobile-menu-item:hover {
+  box-shadow: inset -200px 50px 200px -100px rgba(255, 255, 255, 0.8);
+  transition-duration: 0.5s;
+  color: rgb(37, 72, 100);
+}
+
 @font-face {
   font-family: 'ralewaybold';
   src: url('../../fonts/raleway-bold-webfont.woff2') format('woff2'),

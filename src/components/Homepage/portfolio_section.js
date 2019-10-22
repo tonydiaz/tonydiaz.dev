@@ -110,7 +110,7 @@ const PortfolioImage = styled.div`
     min-height: 200px;
     width: 100%;
     content: '';
-    z-index: 999;
+    z-index: 9;
     position: absolute;
   }
   &:hover::before {
@@ -124,7 +124,7 @@ const PortfolioImage = styled.div`
     font-size: 38px;
     justify-content: center;
     background: rgba(0, 0, 0, 0.3);
-    z-index: 999;
+    z-index: 9;
     position: absolute;
   }
 `;

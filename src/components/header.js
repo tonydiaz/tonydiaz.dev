@@ -18,7 +18,19 @@ const Header = ({ siteTitle }) => {
     });
 
     document.getElementById('menu-toggle').addEventListener('click', () => {
-      setMenuState(!menuOpen);
+      if (menuOpen) {
+        setMenuState(false);
+      } else {
+        setMenuState(true);
+      }
+    });
+
+    const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
+
+    mobileMenuItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        setMenuState(false);
+      });
     });
   });
 
@@ -47,14 +59,35 @@ const Header = ({ siteTitle }) => {
               </ul>
             </div>
             <div className="hidden-above-tablet">
-              <MobileMenuIcon>
+              <MobileMenuIcon scrolled={headerScrolled}>
                 <FontAwesomeIcon icon="bars" id="menu-toggle" />
               </MobileMenuIcon>
-              {menuOpen ? (
-                <MobileMenu></MobileMenu>
-              ) : (
-                null
-              )}
+              <div
+                className={
+                  menuOpen ?
+                    'mobile-menu-placeholder open' :
+                    'mobile-menu placeholder'
+                }
+              />
+              <div
+                id="mobile-menu"
+                className={menuOpen ? 'mobile-menu open' : 'mobile-menu'}
+              >
+                <div className="mobile-menu-items">
+                  <a className="mobile-menu-item" href="/">
+                    Home
+                  </a>
+                  <a className="mobile-menu-item" href="#about">
+                    About
+                  </a>
+                  <a className="mobile-menu-item" href="#skills">
+                    Skills
+                  </a>
+                  <a className="mobile-menu-item" href="#portfolio">
+                    Portfolio
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -72,10 +105,19 @@ Header.defaultProps = {
 };
 
 const MobileMenuIcon = styled.div`
-  font-size: 28px;
-  &:hover {
+  width: 20px;
+  height: 20px;
+  font-size: ${props => (props.scrolled ? '20px' : '28px')};
+  &:hover > * {
     cursor: pointer;
     transform: scale(1.2);
+  }
+  position: relative;
+  & > * {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
   }
 `;
 
