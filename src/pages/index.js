@@ -10,6 +10,7 @@ import {
   faRocket,
   faBars,
 } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HeroImage from '../components/hero';
@@ -18,7 +19,7 @@ import SkillsSection from '../components/Homepage/skills_section';
 import PortfolioSection from '../components/Homepage/portfolio_section';
 import Header from '../components/header';
 
-library.add(faMobileAlt, faCode, faCodeBranch, faRocket, faBars);
+library.add(faMobileAlt, faCode, faCodeBranch, faRocket, faBars, fab);
 
 const IndexPage = ({ data }) => (
   <Layout>

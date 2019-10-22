@@ -83,6 +83,16 @@ const Header = ({ siteTitle }) => {
                   <a className="mobile-menu-item" href="#portfolio">
                     Portfolio
                   </a>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <a href="https://github.com/jarodpeachey" className="mobile-menu-item">
+                    <FontAwesomeIcon icon={['fab', 'github']} id="menu-toggle" />
+                  </a>
+                  <a href="https://linkeding.com/in/jarod-peachey" className="mobile-menu-item">
+                    <FontAwesomeIcon icon={['fab', 'linkedin']} id="menu-toggle" />
+                  </a>
                 </div>
               </div>
             </div>
