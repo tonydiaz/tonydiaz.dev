@@ -59,10 +59,7 @@ const HeroImage = ({ children }) => {
               fadeIn="soft"
             >
               <HeroContainer>
-                <ChildContainer
-                  style={{
-                    marginTop: scrollValue * 1.1,
-                  }}
+                <ChildContainer scrollValue={scrollValue}
                   className="container"
                 >
                   {children}
@@ -87,14 +84,17 @@ const HeroContainer = styled.div`
   display: flex;
   align-items: center;
   height: 100vh;
-  max-height: 100vh;
   box-shadow: inset 0 0 0 2000px rgba(37, 56, 72, 0.3);
   text-align: center;
   overflow: hidden;
+  min-height: 420px !important;
 `;
 
 const ChildContainer = styled.div`
-  // padding-bottom: 20vh'
+  margin: 0;
+  @media (orientation:portrait) {
+    margin-top: ${props => props.scrollValue * 1.1}px;
+  }
 `;
 
 export default HeroImage;

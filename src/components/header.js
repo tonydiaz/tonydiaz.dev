@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => {
       }
     });
 
-    document.getElementById("mobile-menu").addEventListener('click', () => {
+    document.getElementById('mobile-menu').addEventListener('click', () => {
       setMenuState(false);
     });
 
