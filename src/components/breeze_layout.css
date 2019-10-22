@@ -107,11 +107,18 @@ code {
   text-transform: uppercase;
   margin: 0 auto;
   margin-bottom: 32px;
-  width: 40%;
-  max-width: 400px;
-  border-bottom: 2px solid var(--primary);
   text-align: center;
   font-size: 36px;
+}
+.title::after {
+  content: '';
+  height: 2px;
+  width: 40%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: var(--primary);
+  display: block;
+  margin-top: 12px;
 }
 a {
   margin: 0;
@@ -1763,8 +1770,9 @@ p {
   padding: 4px;
 }
 
-#navbar .navbar-title {
+.navbar-title {
   font-size: 28px;
+  margin: 0;
 }
 
 .navbar-content {
@@ -1778,24 +1786,11 @@ p {
   flex: 1 1 0;
 }
 
-.navbar-left .navbar-title {
-  margin: 0;
-}
-
 .navbar-right {
   width: fit-content;
 }
 
-.navbar-left .menu {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-right .menu {
+.menu {
   display: flex;
   list-style: none;
   align-items: center;
@@ -1826,77 +1821,6 @@ p {
   /* background: rgba(255, 255, 255, 0.466); */
   box-shadow: inset 100px 50px 200px -100px rgba(255, 255, 255, 0.5);
   transition-duration: .5s;
-}
-
-.menu > .menu-item > .menu {
-  display: none;
-}
-
-.menu > .menu-item:hover > .menu {
-  display: block;
-  position: absolute;
-  top: 62px;
-  min-width: 175px;
-  width: auto;
-  background: #f1f1f1;
-  left: 0;
-}
-
-.menu > .menu-item:hover > .menu.left {
-  right: 0 !important;
-  left: auto;
-}
-
-.menu > .menu-item.with-menu:hover::after {
-  content: '';
-  position: absolute;
-  display: block;
-  background: transparent;
-  width: 120px;
-  height: 35px;
-  right: calc(50% - 60px);
-  top: 30px;
-}
-
-.menu > .menu-item.with-menu:hover::before {
-  content: '';
-  display: block;
-  background: #f1f1f1;
-  width: 14px;
-  height: 14px;
-  transform: rotate(45deg);
-  position: absolute;
-  top: calc(62px - 7px);
-  right: calc(50% - 7px);
-  z-index: 0;
-}
-
-.menu > .menu-item:hover > .menu > .menu-item a {
-  background: transparent;
-  color: var(--dark-gray) !important;
-}
-
-.menu > .menu-item:hover > .menu > .menu-item:hover a,
-.menu > .menu-item:hover > .menu > a.menu-item:hover {
-  background: #ebebeb;
-  color: var(--dark-gray) !important;
-}
-
-.menu > .menu-item:hover > .menu.full-width {
-  position: fixed;
-  z-index: 500;
-  width: calc(100vw - 17px) !important;
-  top: 78px;
-  left: 0;
-}
-
-.menu > .menu-item:hover > .menu.left.full-width {
-  position: absolute;
-  width: calc(100vw - 17px) !important;
-  margin-right: -15px;
-  right: 0;
-  left: auto;
-  top: 62px;
 }
 
 /* TYPOGRAPHY
