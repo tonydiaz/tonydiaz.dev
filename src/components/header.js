@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useState, setState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { styled } from 'linaria/react';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 const Header = ({ siteTitle }) => {
   const [headerScrolled, setHeaderState] = useState(false);
@@ -21,15 +21,15 @@ const Header = ({ siteTitle }) => {
     document.getElementById('menu-toggle').addEventListener('click', () => {
       if (menuOpen) {
         setMenuState(false);
-        enableBodyScroll(document.getElementById('mobile-menu-items'));
+        clearAllBodyScrollLocks();
       } else {
         setMenuState(true);
+        disableBodyScroll(document.getElementById('mobile-menu-items'));
       }
     });
 
     document.getElementById('mobile-menu').addEventListener('click', () => {
       setMenuState(false);
-      disableBodyScroll(document.getElementById('mobile-menu-items'));
     });
 
     const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
@@ -37,6 +37,7 @@ const Header = ({ siteTitle }) => {
     mobileMenuItems.forEach((item) => {
       item.addEventListener('click', () => {
         setMenuState(false);
+        clearAllBodyScrollLocks();
       });
     });
   });

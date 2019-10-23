@@ -108,6 +108,7 @@ const PortfolioImage = styled.div`
     transition-duration: 5;
     display: block;
     min-height: 200px;
+    height: 100%;
     width: 100%;
     content: '';
     z-index: 9;
