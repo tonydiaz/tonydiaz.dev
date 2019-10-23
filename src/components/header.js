@@ -1,14 +1,8 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import React, { useState, setState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { styled } from 'linaria/react';
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from 'body-scroll-lock';
-import { faXing } from '@fortawesome/free-brands-svg-icons';
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 const Header = ({ siteTitle }) => {
   const [headerScrolled, setHeaderState] = useState(false);
@@ -35,6 +29,7 @@ const Header = ({ siteTitle }) => {
 
     document.getElementById('mobile-menu').addEventListener('click', () => {
       setMenuState(false);
+      clearAllBodyScrollLocks();
     });
 
     const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
@@ -52,13 +47,15 @@ const Header = ({ siteTitle }) => {
       id="navbar"
       className={headerScrolled ? 'fixed bg-primary' : 'bg-transparent'}
     >
-      <div className="container">
-        <div className="navbar-content">
+      <Container className="container full-height">
+        <div className="navbar-content full-height">
           <div className="navbar-left">
-            <h2 className="navbar-title">Jarod Peachey</h2>
+            <h2 className="navbar-title">
+              <a href="/">{siteTitle}</a>
+            </h2>
           </div>
-          <div className="navbar-right">
-            <div className="hidden-below-tablet">
+          <div className="navbar-right full-height">
+            <div className="hidden-below-tablet full-height">
               <ul className="menu">
                 <li className="menu-item">
                   <a href="#about">About</a>
@@ -71,8 +68,8 @@ const Header = ({ siteTitle }) => {
                 </li>
               </ul>
             </div>
-            <div className="hidden-above-tablet">
-              <MobileMenuIcon scrolled={headerScrolled}>
+            <div className="hidden-above-tablet full-height">
+              <MobileMenuIcon className="full-height" scrolled={headerScrolled}>
                 <FontAwesomeIcon icon="bars" id="menu-toggle" />
               </MobileMenuIcon>
               <div
@@ -118,7 +115,7 @@ const Header = ({ siteTitle }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </header>
   );
 };
@@ -131,9 +128,12 @@ Header.defaultProps = {
   siteTitle: '',
 };
 
+const Container = styled.div``;
+
 const MobileMenuIcon = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  display: flex;
+  align-items: center;
   font-size: ${props => (props.scrolled ? '20px' : '28px')};
   &:hover > * {
     cursor: pointer;
@@ -141,10 +141,7 @@ const MobileMenuIcon = styled.div`
   }
   position: relative;
   & > * {
-    position: absolute;
     z-index: 999;
-    top: 0;
-    right: 0;
   }
 `;
 

@@ -2,7 +2,7 @@
 --------------------------------------------------------------- */
 
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -1913,7 +1913,8 @@ p {
 #navbar {
   width: 100% !important;
   z-index: 999 !important;
-  height: fit-content;
+  margin-top: 16px;
+  height: 60px;
   position: fixed;
   top: 0;
 }
@@ -1927,19 +1928,12 @@ p {
   position: fixed;
   top: 0;
   box-shadow: 0 20px 40px -25px rgb(78, 78, 78);
-}
-
-#navbar.fixed .navbar-content {
-  padding: 4px;
-}
-
-.navbar-title {
-  font-size: 28px;
-  margin: 0;
+  height: 50px;
+  margin-top: 0;
 }
 
 .navbar-content {
-  padding: 22px 0;
+  padding: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1947,6 +1941,18 @@ p {
 
 .navbar-left {
   flex: 1 1 0;
+}
+
+.navbar-left a {
+  color: white !important;
+  display: block;
+  height: fit-content;
+  width: fit-content;
+}
+
+.navbar-title {
+  font-size: 28px;
+  margin: 0;
 }
 
 .navbar-right {
@@ -1960,19 +1966,25 @@ p {
   justify-content: flex-end;
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+.full-height {
+  height: 100% !important;
 }
 
 .menu-item {
-  height: 100%;
+  height: 100% !important;
   display: flex;
   align-items: center;
   margin: 0;
   position: relative;
+  padding: 0 12px;
 }
 
 .menu-item > a {
-  padding: 15px;
-  line-height: 100%;
+  display: block;
+  /* line-height: 100%; */
   box-shadow: none;
   color: inherit;
   width: 100%;
