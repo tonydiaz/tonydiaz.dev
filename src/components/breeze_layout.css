@@ -99,7 +99,7 @@
   width: 9px; /* 1px wider than Lion. */
   /* This is more usable for users trying to click it. */
   background-color: transparent;
-  -webkit-border-radius: 100px;
+  border-radius: 100px;
 }
 /* hover effect for both scrollbar area, and scrollbar 'thumb' */
 ::-webkit-scrollbar:hover {
@@ -112,7 +112,7 @@
   /* This is the EXACT color of Mac OS scrollbars. 
      Yes, I pulled out digital color meter */
   background: rgb(37, 72, 100);
-  -webkit-border-radius: 100px;
+  border-radius: 100px;
 }
 
 .mobile-menu-items::-webkit-scrollbar {
@@ -121,7 +121,7 @@
 
 .mobile-menu-items::-webkit-scrollbar-track {
   background: rgb(37, 72, 100);
-  -webkit-box-shadow: inset 10px 5px 10px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 10px 5px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu-items::-webkit-scrollbar-thumb {
@@ -513,7 +513,7 @@ p {
 }
 
 .col {
-  padding: 8px 0px;
+  padding: 8px 0;
   margin: 0;
   flex-basis: 0;
   flex-grow: 1;
@@ -772,7 +772,7 @@ p {
   .row .col {
     width: 100%;
     display: block;
-    padding: 8px 0px;
+    padding: 8px 0;
   }
 }
 
@@ -1271,7 +1271,7 @@ p {
   }
 
   .row .widescreen {
-    padding: 8px 0px;
+    padding: 8px 0;
     width: 100%;
   }
 }
