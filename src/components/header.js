@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useState, setState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { styled } from 'linaria/react';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 const Header = ({ siteTitle }) => {
   const [headerScrolled, setHeaderState] = useState(false);
@@ -20,6 +21,7 @@ const Header = ({ siteTitle }) => {
     document.getElementById('menu-toggle').addEventListener('click', () => {
       if (menuOpen) {
         setMenuState(false);
+        enableBodyScroll(document.getElementById('mobile-menu-items'));
       } else {
         setMenuState(true);
       }
@@ -27,6 +29,7 @@ const Header = ({ siteTitle }) => {
 
     document.getElementById('mobile-menu').addEventListener('click', () => {
       setMenuState(false);
+      disableBodyScroll(document.getElementById('mobile-menu-items'));
     });
 
     const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
@@ -70,7 +73,7 @@ const Header = ({ siteTitle }) => {
                 id="mobile-menu"
                 className={menuOpen ? 'mobile-menu open' : 'mobile-menu'}
               >
-                <div className="mobile-menu-items">
+                <div id="mobile-menu-items" className="mobile-menu-items">
                   <a className="mobile-menu-item" href="#home">
                     Home
                   </a>

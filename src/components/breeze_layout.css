@@ -90,8 +90,44 @@
   height: 93%; /* Should be 100%, but we have a notice message :D */
   align-items: flex-end;
   justify-content: flex-start;
-  transform: translateX(-50%) skew(-16deg);
+  transform: translateX(-50.5%) skew(-16deg);
   width: 100%;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 9px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: transparent;
+  -webkit-border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+  width: 10px !important;
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  /* This is the EXACT color of Mac OS scrollbars. 
+     Yes, I pulled out digital color meter */
+  background: rgb(37, 72, 100);
+  -webkit-border-radius: 100px;
+}
+
+.mobile-menu-items::-webkit-scrollbar {
+  width: .3em;
+}
+ 
+.mobile-menu-items::-webkit-scrollbar-track {
+  background: rgb(37, 72, 100);
+  -webkit-box-shadow: inset 10px 5px 10px -5px rgba(0,0,0,0.3);
+}
+ 
+.mobile-menu-items::-webkit-scrollbar-thumb {
+  background-color: white;
+  z-index: 9999;
+  border-radius: 50px;
 }
 
 @media (max-width: 450px) {
@@ -389,17 +425,19 @@ a.button.secondary.transparent::before {
 
 body {
   width: 100%;
+  height: 100%;
   overflow-x: auto;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
+  overflow-y: auto;
   font-family: Raleway !important;
 }
 
 html {
   box-sizing: border-box;
-  overflow: auto;
+  /* overflow-y: hidden; */
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 p {
