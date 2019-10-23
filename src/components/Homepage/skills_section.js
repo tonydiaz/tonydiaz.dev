@@ -92,20 +92,24 @@ const SkillsSection = () => (
     `}
     render={(data) => {
       // Extract imageData.
-      const imageData = data.desktop.childImageSharp.fluid;
+
+      const backgroundFluidImageStack = [
+        'linear-gradient(rgba(37, 72, 100, 0.93), rgba(37, 72, 100, 0.93))',
+        data.desktop.childImageSharp.fluid,
+      ];
+
       return (
         <BackgroundImage
           Tag="section"
           // To style via external CSS see layout.css last examples:
           // className="test"
-          fluid={imageData}
+          fluid={backgroundFluidImageStack}
           backgroundColor="#040e18"
           style={{
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundAttachment: 'fixed',
-            // top: -scrollValue,
-            // clipPath: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)',
+            background: 'linear-gradient()',
           }}
           // https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles):
           id="hero_image"
@@ -113,78 +117,72 @@ const SkillsSection = () => (
         >
           <Wrapper className="container" id="skills">
             <h2 className="title">Skills</h2>
-            <div className="row desktop">
-              <div className="col col-6">
-                <SkillWrapper>
-                  <h2>Languages</h2>
-                  <div className="row mobile">
-                    {skills
-                      .filter((skill) => {
-                        for (let i = 0; i < skill.tags.length; i++) {
-                          if (skill.tags[i] !== 'tools') {
-                            return true;
-                          }
-                        }
-                      })
-                      .map(skill => (
-                        <div className="col col-6 tablet-col-4 desktop-col-3">
-                          <MainSkill>
-                            <MainSkillIconContainer>
-                              {' '}
-                              <MainSkillIcon>
-                                <FontAwesomeIcon icon="code-branch" />
-                              </MainSkillIcon>
-                            </MainSkillIconContainer>
-                            <MainSkillTitle>{skill.name}</MainSkillTitle>
-                            <MainSkillRating>
-                              <Star />
-                              <Star />
-                              <Star />
-                              <Star />
-                              <Star />
-                            </MainSkillRating>
-                          </MainSkill>
-                        </div>
-                      ))}
-                  </div>
-                </SkillWrapper>
+            <SkillWrapper>
+              {/* <h2>Languages</h2> */}
+              <div className="row mobile">
+                {skills
+                  .filter((skill) => {
+                    for (let i = 0; i < skill.tags.length; i++) {
+                      if (skill.tags[i] !== 'tools') {
+                        return true;
+                      }
+                    }
+                  })
+                  .map(skill => (
+                    <div className="col col-6 tablet-col-4 desktop-col-3">
+                      <MainSkill>
+                        <MainSkillIconContainer>
+                          {' '}
+                          <MainSkillIcon>
+                            <FontAwesomeIcon icon="code-branch" />
+                          </MainSkillIcon>
+                        </MainSkillIconContainer>
+                        <MainSkillTitle>{skill.name}</MainSkillTitle>
+                        <MainSkillRating>
+                          <Star />
+                          <Star />
+                          <Star />
+                          <Star />
+                          <Star />
+                        </MainSkillRating>
+                      </MainSkill>
+                    </div>
+                  ))}
               </div>
-              <div className="col col-6">
-                <SkillWrapper>
-                  <h2>Tools</h2>
-                  <div className="row mobile">
-                    {skills
-                      .filter((skill) => {
-                        for (let i = 0; i < skill.tags.length; i++) {
-                          if (skill.tags[i] === 'tools') {
-                            return true;
-                          }
-                        }
-                      })
-                      .map(skill => (
-                        <div className="col col-6 tablet-col-4 desktop-col-3">
-                          <MainSkill>
-                            <MainSkillIconContainer>
-                              {' '}
-                              <MainSkillIcon>
-                                <FontAwesomeIcon icon="code-branch" />
-                              </MainSkillIcon>
-                            </MainSkillIconContainer>
-                            <MainSkillTitle>{skill.name}</MainSkillTitle>
-                            <MainSkillRating>
-                              <Star />
-                              <Star />
-                              <Star />
-                              <Star />
-                              <Star />
-                            </MainSkillRating>
-                          </MainSkill>
-                        </div>
-                      ))}
-                  </div>
-                </SkillWrapper>
+            </SkillWrapper>
+            <SkillWrapper>
+              {/* <h2>Tools</h2> */}
+              <div className="row mobile">
+                {skills
+                  .filter((skill) => {
+                    for (let i = 0; i < skill.tags.length; i++) {
+                      if (skill.tags[i] === 'tools') {
+                        return true;
+                      }
+                    }
+                  })
+                  .map(skill => (
+                    <div className="col col-6 tablet-col-4 desktop-col-3">
+                      <MainSkill>
+                        <MainSkillIconContainer>
+                          {' '}
+                          <MainSkillIcon>
+                            <FontAwesomeIcon icon="code-branch" />
+                          </MainSkillIcon>
+                        </MainSkillIconContainer>
+                        <MainSkillTitle>{skill.name}</MainSkillTitle>
+                        <MainSkillRating>
+                          <Star />
+                          <Star />
+                          <Star />
+                          <Star />
+                          <Star />
+                        </MainSkillRating>
+                      </MainSkill>
+                    </div>
+                  ))}
               </div>
-            </div>
+            </SkillWrapper>
           </Wrapper>
         </BackgroundImage>
       );
@@ -206,8 +204,8 @@ const MainSkill = styled.div`
 `;
 
 const MainSkillIconContainer = styled.div`
-  height: 140px;
-  width: 166px;
+  height: 103px;
+  width: 125px;
   font-size: 48px;
   margin: 0 auto;
   clip-path: polygon(22% 0%, 78% 0%, 100% 50%, 78% 100%, 22% 100%, 0% 50%);
@@ -217,8 +215,8 @@ const MainSkillIconContainer = styled.div`
 `;
 
 const MainSkillIcon = styled.div`
-  height: 135px;
-  width: 160px;
+  height: 98px;
+  width: 119px;
   margin: 0 auto;
   color: white;
   display: flex;
