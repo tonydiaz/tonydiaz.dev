@@ -95,7 +95,6 @@ const Header = ({ siteTitle }) => {
                   <br />
                   <br />
                   <br />
-                  <br />
                   <a
                     href="https://github.com/jarodpeachey"
                     className="mobile-menu-item"

@@ -9,6 +9,7 @@ import {
   faCodeBranch,
   faRocket,
   faBars,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Layout from '../components/layout';
@@ -17,9 +18,8 @@ import HeroImage from '../components/hero';
 import AboutSection from '../components/Homepage/about_section';
 import SkillsSection from '../components/Homepage/skills_section';
 import PortfolioSection from '../components/Homepage/portfolio_section';
-import Header from '../components/header';
 
-library.add(faMobileAlt, faCode, faCodeBranch, faRocket, faBars, fab);
+library.add(faMobileAlt, faCode, faCodeBranch, faRocket, faBars, faEnvelope, fab);
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -36,7 +36,6 @@ const IndexPage = ({ data }) => (
         </button>
       </a>
     </HeroImage>
-    <Header />
     <AboutSection />
     <SkillsSection />
     <PortfolioSection />
