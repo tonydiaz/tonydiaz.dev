@@ -87,7 +87,7 @@
   padding-top: 64px;
   display: inline-flex;
   flex-direction: column;
-  height: 93%; /* Should be 100%, but we have a notice message :D */
+  height: 100%;
   align-items: flex-end;
   justify-content: flex-start;
   transform: translateX(-50.5%) skew(-16deg);
@@ -143,6 +143,8 @@
   padding: 12px 0;
   text-align: right;
   width: 100%;
+  position: relative;
+  right: -6px !important;
   padding-right: 60px;
 }
 
