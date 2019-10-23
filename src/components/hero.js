@@ -59,9 +59,7 @@ const HeroImage = ({ children }) => {
               fadeIn="soft"
             >
               <HeroContainer>
-                <ChildContainer scrollValue={scrollValue}
-                  className="container"
-                >
+                <ChildContainer scrollValue={scrollValue} className="container">
                   {children}
                 </ChildContainer>
               </HeroContainer>
@@ -74,9 +72,11 @@ const HeroImage = ({ children }) => {
 };
 
 const MainWrapper = styled.div`
-overflow: hidden;
+  overflow: hidden;
   & *::before {
-    transform: scale(${props => (props.scroll !== 0 ? 1 + (props.scroll * 0.01) / 10 : 1)});
+    transform: scale(
+      ${props => (props.scroll !== 0 ? 1 + (props.scroll * 0.01) / 10 : 1)}
+    );
   }
 `;
 
@@ -92,9 +92,7 @@ const HeroContainer = styled.div`
 
 const ChildContainer = styled.div`
   margin-top: 0;
-  @media (orientation:portrait) {
-    margin-top: ${props => props.scrollValue * 1.1}px;
-  }
+  margin-top: ${props => props.scrollValue * 1.1}px;
 `;
 
 export default HeroImage;

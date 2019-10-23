@@ -35,6 +35,20 @@ function withImageData (WrappedComponent) {
               }
             }
           }
+          wevote_one: file(relativePath: { eq: "wevote_one.PNG" }) {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          wevote_two: file(relativePath: { eq: "wevote_two.PNG" }) {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       `}
       render={data => <WrappedComponent {...props} imageData={data} />}
@@ -54,5 +68,11 @@ const SkillsImageThree = withImageData(props => (
 const CalTrackImage = withImageData(props => (
   <Img fluid={props.imageData.caltrack.childImageSharp.fluid} />
 ));
+const WeVoteImageOne = withImageData(props => (
+  <Img fluid={props.imageData.wevote_one.childImageSharp.fluid} />
+));
+const WeVoteImageTwo = withImageData(props => (
+  <Img fluid={props.imageData.wevote_two.childImageSharp.fluid} />
+));
 
-export { SkillsImageOne, SkillsImageTwo, SkillsImageThree, CalTrackImage };
+export { SkillsImageOne, SkillsImageTwo, SkillsImageThree, CalTrackImage, WeVoteImageOne, WeVoteImageTwo };

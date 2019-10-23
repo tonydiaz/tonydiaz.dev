@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from 'linaria/react';
-import { CalTrackImage } from '../image';
+import { CalTrackImage, WeVoteImageOne } from '../image';
 
 const PortfolioSection = () => (
   <section className="bg-white section" id="portfolio">
@@ -9,17 +9,27 @@ const PortfolioSection = () => (
       <div className="row">
         <div className="col col-6 desktop-col-4">
           <PortfolioWrapper>
-            <a href="/">
+            <a
+              href="https://caltrack.netlify.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <PortfolioImage>
                 <CalTrackImage />
               </PortfolioImage>
             </a>
             <PortfolioTitle>CalTrack</PortfolioTitle>
             <PortfolioDescription>
-              CalTrack is an app I built using React, Redux and Material UI. It
-              allows multiple users to sign up and track their meals and
-              workouts. The data is collected and their calories gained/lost are
-              displayed on the dashboard.
+              <p>
+                CalTrack is an app I built using React, Redux and Material UI.
+                {' '}
+              </p>
+              <p>
+                {' '}
+                It allows multiple users to sign up and track their meals and
+                workouts. The data is collected and their calories gained/lost
+                are displayed on the dashboard.
+              </p>
             </PortfolioDescription>
             <PortfolioSkills>
               <PortfolioSkill>HTML</PortfolioSkill>
@@ -30,17 +40,27 @@ const PortfolioSection = () => (
         </div>
         <div className="col col-6 desktop-col-4">
           <PortfolioWrapper>
-            <a href="/">
+            <a
+              href="https://wevote.us"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <PortfolioImage>
-                <CalTrackImage />
+                <WeVoteImageOne />
               </PortfolioImage>
             </a>
-            <PortfolioTitle>CalTrack</PortfolioTitle>
+            <PortfolioTitle>WeVote</PortfolioTitle>
             <PortfolioDescription>
-              CalTrack is an app I built using React, Redux and Material UI. It
-              allows multiple users to sign up and track their meals and
-              workouts. The data is collected and their calories gained/lost are
-              displayed on the dashboard.
+              <p>
+                At WeVote, I was responsible for the development and maintenance
+                of a large single-page application using React and Flux.
+              </p>
+              <p>
+                I updated 7+ pages to optimize the user experience based on
+                designs from the team. I also browsed through codebase, removing
+                +-10,000 lines of unnecessary code. I added over 16,000 lines of
+                new features.
+              </p>
             </PortfolioDescription>
             <PortfolioSkills>
               <PortfolioSkill>HTML</PortfolioSkill>
@@ -51,42 +71,63 @@ const PortfolioSection = () => (
         </div>
         <div className="col col-6 desktop-col-4">
           <PortfolioWrapper>
-            <a href="/">
+            <a
+              href="https://wevote.us"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <PortfolioImage>
                 <CalTrackImage />
               </PortfolioImage>
             </a>
-            <PortfolioTitle>CalTrack</PortfolioTitle>
+            <PortfolioTitle>WeVote</PortfolioTitle>
             <PortfolioDescription>
-              CalTrack is an app I built using React, Redux and Material UI. It
-              allows multiple users to sign up and track their meals and
-              workouts. The data is collected and their calories gained/lost are
-              displayed on the dashboard.
+              <p>
+                At WeVote, I was responsible for the development and maintenance
+                of a large single-page application using React and Flux.
+              </p>
+              <p>
+                I updated 7+ pages to optimize the user experience based on
+                designs from the team. I also browsed through codebase, removing
+                +-10,000 lines of unnecessary code. I added over 16,000 lines of
+                new features.
+              </p>
             </PortfolioDescription>
             <PortfolioSkills>
               <PortfolioSkill>HTML</PortfolioSkill>
-              <PortfolioSkill>PHP</PortfolioSkill>
+              <PortfolioSkill>CSS</PortfolioSkill>
               <PortfolioSkill>React</PortfolioSkill>
             </PortfolioSkills>
           </PortfolioWrapper>
         </div>
         <div className="col col-6 desktop-col-4">
           <PortfolioWrapper>
-            <a href="/">
+            <a
+              href="https://wevote.us"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <PortfolioImage>
                 <CalTrackImage />
               </PortfolioImage>
             </a>
-            <PortfolioTitle>CalTrack</PortfolioTitle>
+            <PortfolioTitle>WeVote</PortfolioTitle>
             <PortfolioDescription>
-              CalTrack is an app I built using React, Redux and Material UI. It
-              allows multiple users to sign up and track their meals and
-              workouts. The data is collected and their calories gained/lost are
-              displayed on the dashboard.
+              <p>
+                At WeVote, I was responsible for the development and maintenance
+                of a large single-page application using React and Flux.
+              </p>
+              <p>
+                I updated 7+ pages to optimize the user experience based on
+                designs from the team. I also browsed through codebase, removing
+                +-10,000 lines of unnecessary code. I added over 16,000 lines of
+                new features.
+              </p>
             </PortfolioDescription>
             <PortfolioSkills>
               <PortfolioSkill>HTML</PortfolioSkill>
               <PortfolioSkill>CSS</PortfolioSkill>
+              <PortfolioSkill>React</PortfolioSkill>
             </PortfolioSkills>
           </PortfolioWrapper>
         </div>
@@ -131,18 +172,20 @@ const PortfolioImage = styled.div`
 `;
 
 const PortfolioTitle = styled.div`
-  font-size: 36px;
+  font-size: 28px;
   color: black;
   font-weight: bold;
   text-align: center;
   margin: 12px 0;
+  @media(min-width: 576px) {
+    font-size: 36px;
+  }
 `;
 
 const PortfolioDescription = styled.div`
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  coor: #666;
+  text-align: center !important;
+  font-weight: 500 !important;
+  color: #666 !important;
 `;
 
 const PortfolioSkills = styled.div`

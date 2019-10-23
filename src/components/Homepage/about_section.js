@@ -144,9 +144,12 @@ const MainSkillIcon = styled.div`
 
 const MainSkillTitle = styled.div`
   font-weight: bold;
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 16px;
+  @media(min-width: 576px){
+    font-size: 28px;
+  }
 `;
 
 const MainSkillRating = styled.div`
