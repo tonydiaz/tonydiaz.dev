@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import React, { useState, setState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { styled } from 'linaria/react';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from 'body-scroll-lock';
+import { faXing } from '@fortawesome/free-brands-svg-icons';
 
 const Header = ({ siteTitle }) => {
   const [headerScrolled, setHeaderState] = useState(false);
@@ -87,15 +92,27 @@ const Header = ({ siteTitle }) => {
                   <a className="mobile-menu-item" href="#portfolio">
                     Portfolio
                   </a>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <a href="https://github.com/jarodpeachey" className="mobile-menu-item">
-                    <FontAwesomeIcon icon={['fab', 'github']} id="menu-toggle" />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <a
+                    href="https://github.com/jarodpeachey"
+                    className="mobile-menu-item"
+                  >
+                    <FontAwesomeIcon
+                      icon={['fab', 'github']}
+                      id="menu-toggle"
+                    />
                   </a>
-                  <a href="https://linkeding.com/in/jarod-peachey" className="mobile-menu-item">
-                    <FontAwesomeIcon icon={['fab', 'linkedin']} id="menu-toggle" />
+                  <a
+                    href="https://linkeding.com/in/jarod-peachey"
+                    className="mobile-menu-item"
+                  >
+                    <FontAwesomeIcon
+                      icon={['fab', 'linkedin']}
+                      id="menu-toggle"
+                    />
                   </a>
                 </div>
               </div>

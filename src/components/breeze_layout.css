@@ -116,14 +116,14 @@
 }
 
 .mobile-menu-items::-webkit-scrollbar {
-  width: .3em;
+  width: 0.3em;
 }
- 
+
 .mobile-menu-items::-webkit-scrollbar-track {
   background: rgb(37, 72, 100);
-  -webkit-box-shadow: inset 10px 5px 10px -5px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 10px 5px 10px -5px rgba(0, 0, 0, 0.3);
 }
- 
+
 .mobile-menu-items::-webkit-scrollbar-thumb {
   background-color: white;
   z-index: 9999;
@@ -1984,10 +1984,18 @@ p {
   font-size: 20px;
 }
 
-.menu-item:hover {
+.menu-item:active {
   /* background: rgba(255, 255, 255, 0.466); */
-  box-shadow: inset 100px 50px 200px -100px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
   transition-duration: 0.5s;
+}
+
+@media (hover) {
+  .menu-item:hover {
+    /* background: rgba(255, 255, 255, 0.466); */
+    box-shadow: inset 100px 50px 200px -100px rgba(255, 255, 255, 0.5);
+    transition-duration: 0.5s;
+  }
 }
 
 /* TYPOGRAPHY
