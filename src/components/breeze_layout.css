@@ -95,25 +95,21 @@
   overflow-y: auto;
 }
 
-::-webkit-scrollbar {
-  width: 9px; /* 1px wider than Lion. */
-  /* This is more usable for users trying to click it. */
+/* ::-webkit-scrollbar {
+  width: 9px;
   background-color: transparent;
   border-radius: 100px;
 }
-/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+
 ::-webkit-scrollbar:hover {
   background-color: rgba(0, 0, 0, 0.09);
   width: 10px !important;
 }
 
-/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
 ::-webkit-scrollbar-thumb:vertical {
-  /* This is the EXACT color of Mac OS scrollbars. 
-     Yes, I pulled out digital color meter */
   background: rgb(37, 72, 100);
   border-radius: 100px;
-}
+} */
 
 .mobile-menu-items::-webkit-scrollbar {
   width: 0.3em;
@@ -143,8 +139,6 @@
   padding: 12px 0;
   text-align: right;
   width: 100%;
-  position: relative;
-  right: -6px !important;
   padding-right: 60px;
 }
 
