@@ -2,80 +2,94 @@ import React from 'react';
 import { styled } from 'linaria/react';
 import { graphql, StaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SkillIcon from './skill_icon';
 
 const skills = [
   {
+    name: 'React',
+    skillLevel: 4,
+    // tags: ['frontend'],
+    icon: ['fab', 'react'],
+    isImage: false,
+  },
+  {
     name: 'HTML',
-    skillLevel: 90,
-    tags: ['frontend'],
+    skillLevel: 5,
+    // tags: ['frontend'],
+    icon: ['fab', 'html5'],
+    isImage: false,
   },
   {
     name: 'CSS',
-    skillLevel: 100,
+    skillLevel: 5,
     tags: ['frontend'],
+    icon: ['fab', 'css3'],
+    isImage: false,
   },
   {
     name: 'Javascript',
-    skillLevel: 80,
-    tags: ['frontend'],
-  },
-  {
-    name: 'React',
-    skillLevel: 90,
-    tags: ['frontend'],
-  },
-  {
-    name: 'Bootstrap',
-    skillLevel: 60,
-    tags: ['frontend', 'frameworks'],
-  },
-  {
-    name: 'Material UI',
-    skillLevel: 80,
-    tags: ['frontend', 'frameworks'],
-  },
-  {
-    name: 'Webpack',
-    skillLevel: 70,
-    tags: ['tools'],
-  },
-  {
-    name: 'Babel',
-    skillLevel: 60,
-    tags: ['tools'],
+    skillLevel: 5,
+    // tags: ['frontend'],
+    icon: ['fab', 'js-square'],
+    isImage: false,
   },
   {
     name: 'Git / Github',
-    skillLevel: 80,
+    skillLevel: 4,
     tags: ['tools'],
+    icon: ['fab', 'github'],
+    isImage: false,
   },
   {
-    name: 'Wordpress',
-    skillLevel: 50,
-    tags: ['tools', 'frontend'],
+    name: 'Bootstrap',
+    skillLevel: 3,
+    // tags: ['frontend', 'frameworks'],
+    icon: ['fab', 'bootstrap'],
+    isImage: false,
+  },
+  {
+    name: 'Material UI',
+    skillLevel: 4,
+    // tags: ['frontend', 'frameworks'],
+    icon: ['fa', 'code-branch'],
+    isImage: true,
   },
   {
     name: 'PHP',
-    skillLevel: 60,
-    tags: ['backend'],
+    skillLevel: 3,
+    // tags: ['backend'],
+    icon: ['fab', 'php'],
+    isImage: false,
+  },
+  {
+    name: 'Webpack',
+    skillLevel: 3,
+    // tags: ['tools'],
+    isImage: true,
+    icon: ['fa', 'code-branch'],
+  },
+  {
+    name: 'Babel',
+    skillLevel: 3,
+    // tags: ['tools'],
+    icon: ['fa', 'code-branch'],
+    isImage: false,
+  },
+  {
+    name: 'Wordpress',
+    skillLevel: 4,
+    // tags: ['tools', 'frontend'],
+    icon: ['fab', 'wordpress'],
+    isImage: false,
   },
   {
     name: 'MySQL',
-    skillLevel: 40,
-    tags: ['backend'],
+    skillLevel: 2,
+    // tags: ['backend'],
+    icon: ['fa', 'database'],
+    isImage: false,
   },
 ];
-
-const tools = skills.filter((skill) => {
-  for (let i = 0; i < skill.tags.length; i++) {
-    if (skill.tags[i] === 'tools') {
-      return true;
-    }
-  }
-});
-
-console.log(tools);
 
 const SkillsSection = () => (
   <StaticQuery
@@ -94,7 +108,7 @@ const SkillsSection = () => (
       // Extract imageData.
 
       const backgroundFluidImageStack = [
-        'linear-gradient(rgba(37, 72, 100, 0.93), rgba(37, 72, 100, 0.93))',
+        'linear-gradient(rgba(37, 72, 100, 0.87), rgba(37, 72, 100, 0.87))',
         data.desktop.childImageSharp.fluid,
       ];
 
@@ -119,68 +133,12 @@ const SkillsSection = () => (
             <h2 className="title">Skills</h2>
             <SkillWrapper>
               {/* <h2>Languages</h2> */}
-              <div className="row mobile">
-                {skills
-                  .filter((skill) => {
-                    for (let i = 0; i < skill.tags.length; i++) {
-                      if (skill.tags[i] !== 'tools') {
-                        return true;
-                      }
-                    }
-                  })
-                  .map(skill => (
-                    <div className="col col-6 tablet-col-4 desktop-col-3">
-                      <MainSkill>
-                        <MainSkillIconContainer>
-                          {' '}
-                          <MainSkillIcon>
-                            <FontAwesomeIcon icon="code-branch" />
-                          </MainSkillIcon>
-                        </MainSkillIconContainer>
-                        <MainSkillTitle>{skill.name}</MainSkillTitle>
-                        <MainSkillRating>
-                          <Star />
-                          <Star />
-                          <Star />
-                          <Star />
-                          <Star />
-                        </MainSkillRating>
-                      </MainSkill>
-                    </div>
-                  ))}
-              </div>
-            </SkillWrapper>
-            <SkillWrapper>
-              {/* <h2>Tools</h2> */}
-              <div className="row mobile">
-                {skills
-                  .filter((skill) => {
-                    for (let i = 0; i < skill.tags.length; i++) {
-                      if (skill.tags[i] === 'tools') {
-                        return true;
-                      }
-                    }
-                  })
-                  .map(skill => (
-                    <div className="col col-6 tablet-col-4 desktop-col-3">
-                      <MainSkill>
-                        <MainSkillIconContainer>
-                          {' '}
-                          <MainSkillIcon>
-                            <FontAwesomeIcon icon="code-branch" />
-                          </MainSkillIcon>
-                        </MainSkillIconContainer>
-                        <MainSkillTitle>{skill.name}</MainSkillTitle>
-                        <MainSkillRating>
-                          <Star />
-                          <Star />
-                          <Star />
-                          <Star />
-                          <Star />
-                        </MainSkillRating>
-                      </MainSkill>
-                    </div>
-                  ))}
+              <div className="row mobile-lg">
+                {skills.map(skill => (
+                  <div className="col col-6 tablet-col-4 desktop-col-3">
+                    <SkillIcon skill={skill} />
+                  </div>
+                ))}
               </div>
             </SkillWrapper>
           </Wrapper>
@@ -192,95 +150,13 @@ const SkillsSection = () => (
 
 const Wrapper = styled.div`
   color: white;
+  & .title::after {
+    background: white;
+  }
 `;
 
 const SkillWrapper = styled.div`
   padding: 0 12px;
 `;
 
-const MainSkill = styled.div`
-  margin-bottom: 36px;
-  padding: 0 12px;
-`;
-
-const MainSkillIconContainer = styled.div`
-  height: 103px;
-  width: 125px;
-  font-size: 48px;
-  margin: 0 auto;
-  clip-path: polygon(22% 0%, 78% 0%, 100% 50%, 78% 100%, 22% 100%, 0% 50%);
-  margin-bottom: 12px;
-  background: white;
-  padding-top: 2.5px;
-`;
-
-const MainSkillIcon = styled.div`
-  height: 98px;
-  width: 119px;
-  margin: 0 auto;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 48px;
-  background: rgb(37, 72, 100);
-  clip-path: polygon(22% 0%, 78% 0%, 100% 50%, 78% 100%, 22% 100%, 0% 50%);
-`;
-
-const MainSkillTitle = styled.div`
-  font-weight: bold;
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 16px;
-  @media (min-width: 576px) {
-    font-size: 28px;
-  }
-`;
-
-const MainSkillRating = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
-`;
-
-const Star = styled.div`
-  position: relative;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 0.9em;
-  margin-right: 0.9em;
-  margin-bottom: 1.2em;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0.7em solid #fc0;
-  border-left: 0.3em solid transparent;
-  font-size: 12px;
-  &::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0.6em;
-    left: -1em;
-    border-right: 1em solid transparent;
-    border-bottom: 0.7em solid #fc0;
-    border-left: 1em solid transparent;
-    transform: rotate(-35deg);
-  }
-  &::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0.6em;
-    left: -1em;
-    border-right: 1em solid transparent;
-    border-bottom: 0.7em solid #fc0;
-    border-left: 1em solid transparent;
-    transform: rotate(35deg);
-  }
-`;
 export default SkillsSection;

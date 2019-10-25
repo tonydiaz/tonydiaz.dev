@@ -10,8 +10,9 @@ import {
   faRocket,
   faBars,
   faEnvelope,
+  faDatabase,
 } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fab, faCss3, faHtml5, faJsSquare, faReact, faBootstrap, faPhp, faGithub, faWordpress } from '@fortawesome/free-brands-svg-icons';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HeroImage from '../components/hero';
@@ -19,7 +20,7 @@ import AboutSection from '../components/Homepage/about_section';
 import SkillsSection from '../components/Homepage/skills_section';
 import PortfolioSection from '../components/Homepage/portfolio_section';
 
-library.add(faMobileAlt, faCode, faCodeBranch, faRocket, faBars, faEnvelope, fab);
+library.add(faMobileAlt, faCode, faCodeBranch, faRocket, faBars, faEnvelope, fab, faCss3, faHtml5, faJsSquare, faReact, faBootstrap, faPhp, faDatabase, faGithub, faWordpress);
 
 const IndexPage = ({ data }) => (
   <Layout>
