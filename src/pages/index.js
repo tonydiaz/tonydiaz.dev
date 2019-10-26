@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => (
     <HeroImage id="home">
       <h1 className="hero_title">Hi. I'm Jarod Peachey</h1>
       <h4 className="hero_subtitle">
-        I'm Front End Web Developer focused on code quality, consistencey and
+        I'm a Front End Web Developer focused on code quality, consistencey and
         website speed.
       </h4>
       <a href="#about">
