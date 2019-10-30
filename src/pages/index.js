@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <HeroImage id="home">
-      <h1 className="hero_title">Hi. I'm Jarod Peachey</h1>
+      <h1 className="hero_title">Hi. I'm Jarod</h1>
       <h4 className="hero_subtitle">
         I'm a Front End Web Developer focused on code quality, consistencey and
         website speed.
