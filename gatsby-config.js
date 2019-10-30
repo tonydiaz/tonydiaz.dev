@@ -33,7 +33,13 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
+      },
+    },
+    {
       resolve: 'gatsby-plugin-zopfli',
-    }
+    },
   ],
 };
