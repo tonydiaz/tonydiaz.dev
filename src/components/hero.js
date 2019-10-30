@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { styled } from 'linaria/react';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 
 import BackgroundImage from 'gatsby-background-image';
 // Use the following to support legacy browsers like IE11:
@@ -14,6 +14,7 @@ import BackgroundImage from 'gatsby-background-image';
  * @return {*}
  * @constructor
  */
+
 const HeroImage = ({ children }) => {
   const [scrollValue, setScrollValue] = useState(false);
 
