@@ -7,7 +7,10 @@ const AboutSection = () => (
     <div className="container center-text">
       <h2 className="title">About Me</h2>
       <p>
-        I'm Jarod Peachey. I'm a hard-working, dedicated web developer with a passion for going above and beyond to create high-quality designs and user experiences: all while creating a maintainable, high-performing website following the latest coding standards.
+        I'm Jarod Peachey. I'm a hard-working, dedicated web developer with a
+        passion for going above and beyond to create high-quality designs and
+        user experiences: all while creating a maintainable, high-performing
+        website following the latest coding standards.
       </p>
       <Row className="row">
         <div className="col col-6 desktop-col-3">
@@ -108,9 +111,11 @@ const AboutSection = () => (
         </div>
       </Row>
       <div className="center-text">
-        <button type="button" className="primary">
-          Contact Me
-        </button>
+        <a href="mailto:jwpeachey107@aol.com">
+          <button type="button" className="primary">
+            Contact Me
+          </button>
+        </a>
       </div>
     </div>
   </section>
@@ -147,7 +152,7 @@ const MainSkillTitle = styled.div`
   font-size: 24px;
   text-align: center;
   margin-bottom: 16px;
-  @media(min-width: 576px){
+  @media (min-width: 576px) {
     font-size: 28px;
   }
 `;

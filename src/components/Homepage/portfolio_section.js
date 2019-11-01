@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from 'linaria/react';
-import { CalTrackImage, WeVoteImageOne } from '../image';
+import { CalTrackImage, WeVoteImageOne, ContactManagerImage } from '../image';
 
 const PortfolioSection = () => (
   <section className="bg-white section" id="portfolio">
@@ -72,56 +72,21 @@ const PortfolioSection = () => (
         <div className="col col-6 desktop-col-4">
           <PortfolioWrapper>
             <a
-              href="https://wevote.us"
+              href="https://peachey-contact.netlify.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
               <PortfolioImage>
-                <CalTrackImage />
+                <ContactManagerImage />
               </PortfolioImage>
             </a>
-            <PortfolioTitle>WeVote</PortfolioTitle>
+            <PortfolioTitle>Contact Manager</PortfolioTitle>
             <PortfolioDescription>
               <p>
-                At WeVote, I was responsible for the development and maintenance
-                of a large single-page application using React and Flux.
+                This is a simple contact manager app with a focus on a modern and clean UI. It uses a design and colors that makes it easy to use and navigate.
               </p>
               <p>
-                I updated 7+ pages to optimize the user experience based on
-                designs from the team. I also browsed through codebase, removing
-                +-10,000 lines of unnecessary code. I added over 16,000 lines of
-                new features.
-              </p>
-            </PortfolioDescription>
-            <PortfolioSkills>
-              <PortfolioSkill>HTML</PortfolioSkill>
-              <PortfolioSkill>CSS</PortfolioSkill>
-              <PortfolioSkill>React</PortfolioSkill>
-            </PortfolioSkills>
-          </PortfolioWrapper>
-        </div>
-        <div className="col col-6 desktop-col-4">
-          <PortfolioWrapper>
-            <a
-              href="https://wevote.us"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <PortfolioImage>
-                <CalTrackImage />
-              </PortfolioImage>
-            </a>
-            <PortfolioTitle>WeVote</PortfolioTitle>
-            <PortfolioDescription>
-              <p>
-                At WeVote, I was responsible for the development and maintenance
-                of a large single-page application using React and Flux.
-              </p>
-              <p>
-                I updated 7+ pages to optimize the user experience based on
-                designs from the team. I also browsed through codebase, removing
-                +-10,000 lines of unnecessary code. I added over 16,000 lines of
-                new features.
+                I created the project from scratch using ReactJS and CSS. I used MaterialUI to create the modern and responsive UI, as well as custom styles.
               </p>
             </PortfolioDescription>
             <PortfolioSkills>
@@ -177,7 +142,7 @@ const PortfolioTitle = styled.div`
   font-weight: bold;
   text-align: center;
   margin: 12px 0;
-  @media(min-width: 576px) {
+  @media (min-width: 576px) {
     font-size: 36px;
   }
 `;

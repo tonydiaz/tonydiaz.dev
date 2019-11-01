@@ -49,6 +49,13 @@ function withImageData (WrappedComponent) {
               }
             }
           }
+          contact_manager: file(relativePath: { eq: "contact_manager.PNG" }) {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       `}
       render={data => <WrappedComponent {...props} imageData={data} />}
@@ -74,5 +81,8 @@ const WeVoteImageOne = withImageData(props => (
 const WeVoteImageTwo = withImageData(props => (
   <Img fluid={props.imageData.wevote_two.childImageSharp.fluid} />
 ));
+const ContactManagerImage = withImageData(props => (
+  <Img fluid={props.imageData.contact_manager.childImageSharp.fluid} />
+));
 
-export { SkillsImageOne, SkillsImageTwo, SkillsImageThree, CalTrackImage, WeVoteImageOne, WeVoteImageTwo };
+export { SkillsImageOne, SkillsImageTwo, SkillsImageThree, CalTrackImage, WeVoteImageOne, WeVoteImageTwo, ContactManagerImage };
