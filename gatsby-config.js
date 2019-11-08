@@ -33,5 +33,6 @@ module.exports = {
         path: 'zopfli',
       },
     },
+    'gatsby-plugin-linaria',
   ],
 };
