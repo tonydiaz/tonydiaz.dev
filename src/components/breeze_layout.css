@@ -148,63 +148,6 @@
   color: rgb(37, 72, 100);
 }
 
-@font-face {
-  font-family: 'ralewaybold';
-  src: url('../../fonts/raleway-bold-webfont.woff2') format('woff2'),
-    url('../../fonts/raleway-bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ralewaybold_italic';
-  src: url('../../fonts/raleway-bolditalic-webfont.woff2') format('woff2'),
-    url('../../fonts/raleway-bolditalic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ralewayitalic';
-  src: url('../../fonts/raleway-italic-webfont.woff2') format('woff2'),
-    url('../../fonts/raleway-italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ralewaylight';
-  src: url('../../fonts/raleway-light-webfont.woff2') format('woff2'),
-    url('../../fonts/raleway-light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ralewaylight_italic';
-  src: url('../../fonts/raleway-lightitalic-webfont.woff2') format('woff2'),
-    url('../../fonts/raleway-lightitalic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ralewayregular';
-  src: url('../../fonts/raleway-regular-webfont.woff2') format('woff2'),
-    url('../../fonts/raleway-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ralewaysemibold';
-  src: url('../../fonts/raleway-semibold-webfont.woff2') format('woff2'),
-    url('../../fonts/raleway-semibold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ralewaysemibold_italic';
-  src: url('../../fonts/raleway-semibolditalic-webfont.woff2') format('woff2'),
-    url('../../fonts/raleway-semibolditalic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -2970,4 +2913,8 @@ small {
   .widescreen-align-text-right {
     text-align: right !important;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat';
 }
