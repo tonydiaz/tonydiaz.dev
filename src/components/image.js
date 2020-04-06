@@ -1,9 +1,9 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
-function withImageData (WrappedComponent) {
-  return props => (
+function withImageData(WrappedComponent) {
+  return (props) => (
     <StaticQuery
       query={graphql`
         query {
@@ -56,33 +56,55 @@ function withImageData (WrappedComponent) {
               }
             }
           }
+          tony: file(relativePath: { eq: "tony.jpg" }) {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       `}
-      render={data => <WrappedComponent {...props} imageData={data} />}
+      render={(data) => <WrappedComponent {...props} imageData={data} />}
     />
   );
 }
 
-const SkillsImageOne = withImageData(props => (
+const SkillsImageOne = withImageData((props) => (
   <Img fluid={props.imageData.skillsImageOne.childImageSharp.fluid} />
 ));
-const SkillsImageTwo = withImageData(props => (
+const SkillsImageTwo = withImageData((props) => (
   <Img fluid={props.imageData.skillsImageTwo.childImageSharp.fluid} />
 ));
-const SkillsImageThree = withImageData(props => (
+const SkillsImageThree = withImageData((props) => (
   <Img fluid={props.imageData.skillsImageThree.childImageSharp.fluid} />
 ));
-const CalTrackImage = withImageData(props => (
+const CalTrackImage = withImageData((props) => (
   <Img fluid={props.imageData.caltrack.childImageSharp.fluid} />
 ));
-const WeVoteImageOne = withImageData(props => (
+const WeVoteImageOne = withImageData((props) => (
   <Img fluid={props.imageData.wevote_one.childImageSharp.fluid} />
 ));
-const WeVoteImageTwo = withImageData(props => (
+const WeVoteImageTwo = withImageData((props) => (
   <Img fluid={props.imageData.wevote_two.childImageSharp.fluid} />
 ));
-const ContactManagerImage = withImageData(props => (
+const ContactManagerImage = withImageData((props) => (
   <Img fluid={props.imageData.contact_manager.childImageSharp.fluid} />
 ));
+const TonyImage = withImageData((props) => (
+  <Img
+    className="my-image"
+    fluid={props.imageData.tony.childImageSharp.fluid}
+  />
+));
 
-export { SkillsImageOne, SkillsImageTwo, SkillsImageThree, CalTrackImage, WeVoteImageOne, WeVoteImageTwo, ContactManagerImage };
+export {
+  SkillsImageOne,
+  SkillsImageTwo,
+  SkillsImageThree,
+  CalTrackImage,
+  WeVoteImageOne,
+  WeVoteImageTwo,
+  ContactManagerImage,
+  TonyImage,
+};

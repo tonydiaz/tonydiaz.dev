@@ -1,122 +1,112 @@
-import React from 'react';
-import { styled } from 'linaria/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import React from "react";
+import { styled } from "linaria/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCity,
+  faTools,
+  faRunning,
+  faTasks,
+} from "@fortawesome/free-solid-svg-icons";
+import { faAws } from "@fortawesome/free-brands-svg-icons";
 const AboutSection = () => (
   <section className="bg-white" id="about">
-    <div className="container center-text">
+    <div className="container center-text text-primary">
       <h2 className="title">About Me</h2>
       <p>
-        I'm Jarod Peachey. I'm a hard-working, dedicated web developer with a
-        passion for going above and beyond to create high-quality designs and
-        user experiences: all while creating a maintainable, high-performing
-        website following the latest coding standards.
+        I’m a entrepreneurial minded engineer with over 18 years of engineering
+        experience in software development, systems engineering, and integration
+        and test. This experience includes legacy systems and new technologies.
+        I have degrees in Computer Science, Engineering Management and an MBA.
+        I’m a continuous learner who is dedicated and adaptable. I’m currently
+        working for IBM performing frontend development on IBM Watson Assistant.
       </p>
+      <h2>Demonstrated skill in:</h2>
       <Row className="row">
-        <div className="col col-6 desktop-col-3">
-          <MainSkill>
-            <MainSkillIcon>
-              <FontAwesomeIcon icon="mobile-alt" />
-            </MainSkillIcon>
-            <MainSkillTitle>Responsive Design</MainSkillTitle>
-            {/* <MainSkillRating>
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-            </MainSkillRating> */}
-            <MainSkillDescription>
-              <p>
-                {' '}
-                Mobile users account for over 50% of all web traffic. That's why
-                my #1 priority is to make sure websites looks good and work
-                perfectly on all screen sizes.
-              </p>
-            </MainSkillDescription>
-          </MainSkill>
-        </div>
-        <div className="col col-6 desktop-col-3">
+        <div className="col col-4 desktop-col-4">
           <MainSkill>
             <MainSkillIcon>
               <FontAwesomeIcon icon="code" />
             </MainSkillIcon>
-            <MainSkillTitle>Code Quality</MainSkillTitle>
-            {/* <MainSkillRating>
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-            </MainSkillRating> */}
-            <MainSkillDescription>
-              <p>
-                To me, coding isn't just writing code until it works like it's
-                supposed to. It's making sure I use coding standards, and find
-                the most efficient way of completing each task.
-              </p>
-            </MainSkillDescription>
+            <MainSkillTitle>Software Development</MainSkillTitle>
+            {/* <MainSkillDescription>
+              <p>18+ years of exerience on software projects</p>
+            </MainSkillDescription> */}
           </MainSkill>
         </div>
-        <div className="col col-6 desktop-col-3">
+        <div className="col col-4 desktop-col-4">
           <MainSkill>
             <MainSkillIcon>
-              <FontAwesomeIcon icon="rocket" />
+              <FontAwesomeIcon icon={faCity} />
             </MainSkillIcon>
-            <MainSkillTitle>Performance</MainSkillTitle>
-            {/* <MainSkillRating>
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-            </MainSkillRating> */}
-            <MainSkillDescription>
-              <p>
-                I optimize my code to be the lightest and fastest possible,
-                testing multiple options and using the fastest, most efficient
-                way to get things done.
-              </p>
-            </MainSkillDescription>
+            <MainSkillTitle>Software Architecture</MainSkillTitle>
           </MainSkill>
         </div>
-        <div className="col col-6 desktop-col-3">
+        <div className="col col-4 desktop-col-4">
           <MainSkill>
             <MainSkillIcon>
-              <FontAwesomeIcon icon="code-branch" />
+              <FontAwesomeIcon icon={faTools} />
             </MainSkillIcon>
-            <MainSkillTitle>Maintainability</MainSkillTitle>
-            {/* <MainSkillRating>
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-            </MainSkillRating> */}
-            <MainSkillDescription>
+            <MainSkillTitle>DevOps</MainSkillTitle>
+            {/* <MainSkillDescription>
               <p>
                 Whether creating a readable file structure or well-defined
                 functions, I make sure my code is easy to maintain in the
                 future.
               </p>
               <p>
-                (That means no functions named
-                {' '}
-                <code>doSomething()</code>
-                {' '}
-                {')'}
+                (That means no functions named <code>doSomething()</code> {")"}
               </p>
-            </MainSkillDescription>
+            </MainSkillDescription> */}
           </MainSkill>
         </div>
       </Row>
-      <div className="center-text">
-        <a href="mailto:jwpeachey107@aol.com">
+      <Row className="row">
+        <div className="col col-4 desktop-col-4">
+          <MainSkill>
+            <MainSkillIcon>
+              <FontAwesomeIcon icon={faAws} />
+            </MainSkillIcon>
+            <MainSkillTitle>Cloud Platforms</MainSkillTitle>
+            {/* <MainSkillDescription>
+              <p>- AWS Certified Solutions Architect</p>
+              <p>- IBM Certified Application Developer</p>
+            </MainSkillDescription> */}
+          </MainSkill>
+        </div>
+        <div className="col col-4 desktop-col-4">
+          <MainSkill>
+            <MainSkillIcon>
+              <FontAwesomeIcon icon={faRunning} />
+            </MainSkillIcon>
+            <MainSkillTitle>Agile Processes</MainSkillTitle>
+            {/* <MainSkillDescription>
+              <p>- Certified Scrum Master</p>
+            </MainSkillDescription> */}
+          </MainSkill>
+        </div>
+        <div className="col col-4 desktop-col-4">
+          <MainSkill>
+            <MainSkillIcon>
+              <FontAwesomeIcon icon={faTasks} />
+            </MainSkillIcon>
+            <MainSkillTitle>Project Management</MainSkillTitle>
+            {/* <MainSkillDescription>
+              <p>- Certified Project Management Professional</p>
+            </MainSkillDescription> */}
+          </MainSkill>
+        </div>
+      </Row>
+      <p>
+        I’m interested in challenging opportunities where I can use my
+        experience to add value.
+      </p>
+      {/* <div className="center-text">
+        <a href="mailto:td@tonydiaz.me">
           <button type="button" className="primary">
             Contact Me
           </button>
         </a>
-      </div>
+      </div> */}
     </div>
   </section>
 );
@@ -149,11 +139,11 @@ const MainSkillIcon = styled.div`
 
 const MainSkillTitle = styled.div`
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 16px;
   @media (min-width: 576px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 `;
 
@@ -177,7 +167,7 @@ const Star = styled.div`
   border-left: 0.3em solid transparent;
   font-size: 12px;
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 0;
@@ -190,7 +180,7 @@ const Star = styled.div`
     transform: rotate(-35deg);
   }
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 0;

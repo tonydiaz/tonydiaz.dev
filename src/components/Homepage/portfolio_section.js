@@ -1,6 +1,6 @@
-import React from 'react';
-import { styled } from 'linaria/react';
-import { CalTrackImage, WeVoteImageOne, ContactManagerImage } from '../image';
+import React from "react";
+import { styled } from "linaria/react";
+import { CalTrackImage, WeVoteImageOne, ContactManagerImage } from "../image";
 
 const PortfolioSection = () => (
   <section className="bg-white section" id="portfolio">
@@ -21,11 +21,10 @@ const PortfolioSection = () => (
             <PortfolioTitle>CalTrack</PortfolioTitle>
             <PortfolioDescription>
               <p>
-                CalTrack is an app I built using React, Redux and Material UI.
-                {' '}
+                CalTrack is an app I built using React, Redux and Material UI.{" "}
               </p>
               <p>
-                {' '}
+                {" "}
                 It allows multiple users to sign up and track their meals and
                 workouts. The data is collected and their calories gained/lost
                 are displayed on the dashboard.
@@ -83,10 +82,14 @@ const PortfolioSection = () => (
             <PortfolioTitle>Contact Manager</PortfolioTitle>
             <PortfolioDescription>
               <p>
-                This is a simple contact manager app with a focus on a modern and clean UI. It uses a design and colors that makes it easy to use and navigate.
+                This is a simple contact manager app with a focus on a modern
+                and clean UI. It uses a design and colors that makes it easy to
+                use and navigate.
               </p>
               <p>
-                I created the project from scratch using ReactJS and CSS. I used MaterialUI to create the modern and responsive UI, as well as custom styles.
+                I created the project from scratch using ReactJS and CSS. I used
+                MaterialUI to create the modern and responsive UI, as well as
+                custom styles.
               </p>
             </PortfolioDescription>
             <PortfolioSkills>
@@ -116,7 +119,7 @@ const PortfolioImage = styled.div`
     min-height: 200px;
     height: 100%;
     width: 100%;
-    content: '';
+    content: "";
     z-index: 9;
     position: absolute;
   }
@@ -124,7 +127,7 @@ const PortfolioImage = styled.div`
     display: block;
     min-height: 200px;
     width: 100%;
-    content: 'View Project';
+    content: "View Project";
     display: flex;
     align-items: center;
     color: white;

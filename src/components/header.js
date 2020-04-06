@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { styled } from 'linaria/react';
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { styled } from "linaria/react";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 const Header = ({ siteTitle }) => {
   const [headerScrolled, setHeaderState] = useState(false);
   const [menuOpen, setMenuState] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 78) {
         setHeaderState(true);
       } else {
@@ -17,25 +17,25 @@ const Header = ({ siteTitle }) => {
       }
     });
 
-    document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById("menu-toggle").addEventListener("click", () => {
       if (menuOpen) {
         setMenuState(false);
         clearAllBodyScrollLocks();
       } else {
         setMenuState(true);
-        disableBodyScroll(document.getElementById('mobile-menu-items'));
+        disableBodyScroll(document.getElementById("mobile-menu-items"));
       }
     });
 
-    document.getElementById('mobile-menu').addEventListener('click', () => {
+    document.getElementById("mobile-menu").addEventListener("click", () => {
       setMenuState(false);
       clearAllBodyScrollLocks();
     });
 
-    const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
+    const mobileMenuItems = document.querySelectorAll(".mobile-menu-item");
 
     mobileMenuItems.forEach((item) => {
-      item.addEventListener('click', () => {
+      item.addEventListener("click", () => {
         setMenuState(false);
         clearAllBodyScrollLocks();
       });
@@ -45,7 +45,7 @@ const Header = ({ siteTitle }) => {
   return (
     <header
       id="navbar"
-      className={headerScrolled ? 'fixed bg-primary' : 'bg-transparent'}
+      className={headerScrolled ? "fixed bg-primary" : "bg-transparent"}
     >
       <Container className="container full-height">
         <div className="navbar-content full-height">
@@ -61,10 +61,10 @@ const Header = ({ siteTitle }) => {
                   <a href="#about">About</a>
                 </li>
                 <li className="menu-item">
-                  <a href="#skills">Skills</a>
+                  <a href="#blog">Blog</a>
                 </li>
                 <li className="menu-item">
-                  <a href="#portfolio">Portfolio</a>
+                  <a href="#timeline">Timeline</a>
                 </li>
               </ul>
             </div>
@@ -74,7 +74,7 @@ const Header = ({ siteTitle }) => {
               </MobileMenuIcon>
               <div
                 id="mobile-menu"
-                className={menuOpen ? 'mobile-menu open' : 'mobile-menu'}
+                className={menuOpen ? "mobile-menu open" : "mobile-menu"}
               >
                 <div id="mobile-menu-items" className="mobile-menu-items">
                   <a className="mobile-menu-item" href="#home">
@@ -83,30 +83,30 @@ const Header = ({ siteTitle }) => {
                   <a className="mobile-menu-item" href="#about">
                     About
                   </a>
-                  <a className="mobile-menu-item" href="#skills">
-                    Skills
+                  <a className="mobile-menu-item" href="#timeline">
+                    Timeline
                   </a>
-                  <a className="mobile-menu-item" href="#portfolio">
-                    Portfolio
+                  <a className="mobile-menu-item" href="#blog">
+                    Blog
                   </a>
                   <br />
                   <br />
                   <br />
                   <a
-                    href="https://github.com/jarodpeachey"
+                    href="https://github.com/tonydiaz"
                     className="mobile-menu-item"
                   >
                     <FontAwesomeIcon
-                      icon={['fab', 'github']}
+                      icon={["fab", "github"]}
                       id="menu-toggle"
                     />
                   </a>
                   <a
-                    href="https://linkedin.com/in/jarod-peachey"
+                    href="https://linkedin.com/in/anthonydiaz"
                     className="mobile-menu-item"
                   >
                     <FontAwesomeIcon
-                      icon={['fab', 'linkedin']}
+                      icon={["fab", "linkedin"]}
                       id="menu-toggle"
                     />
                   </a>
@@ -125,7 +125,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  siteTitle: '',
+  siteTitle: "",
 };
 
 const Container = styled.div``;
@@ -134,7 +134,7 @@ const MobileMenuIcon = styled.div`
   width: 25px;
   display: flex;
   align-items: center;
-  font-size: ${props => (props.scrolled ? '20px' : '28px')};
+  font-size: ${(props) => (props.scrolled ? "20px" : "28px")};
   &:hover > * {
     cursor: pointer;
     transform: scale(1.2);

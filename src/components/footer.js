@@ -1,29 +1,29 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { styled } from 'linaria/react';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { styled } from "linaria/react";
 
 const Footer = () => (
   <Wrapper>
     <Container className="container">
       <div className="row v-align-center">
         <div className="col col-6 center-text tablet-align-text-left">
-          <h2 className="navbar-title">Jarod Peachey</h2>
+          <h2 className="navbar-title">Tony Diaz</h2>
         </div>
         <div className="col col-6 center-text tablet-align-text-left">
           <div className="row mobile align-center tablet-align-right">
             <div className="menu-item">
-              <MenuLink href="mailto:jwpeachey107@aol.com">
+              <MenuLink href="mailto:td@tonydiaz.me">
                 <FontAwesomeIcon icon="envelope" />
               </MenuLink>
             </div>
             <div className="menu-item">
-              <MenuLink href="https://github.com/jarodpeachey">
-                <FontAwesomeIcon icon={['fab', 'github']} id="menu-toggle" />
+              <MenuLink href="https://github.com/tonydiaz">
+                <FontAwesomeIcon icon={["fab", "github"]} id="menu-toggle" />
               </MenuLink>
             </div>
             <div className="menu-item">
-              <MenuLink href="https://linkedin.com/in/jarod-peachey">
-                <FontAwesomeIcon icon={['fab', 'linkedin']} id="menu-toggle" />
+              <MenuLink href="https://linkedin.com/in/anthonydiaz">
+                <FontAwesomeIcon icon={["fab", "linkedin"]} id="menu-toggle" />
               </MenuLink>
             </div>
           </div>
@@ -35,7 +35,7 @@ const Footer = () => (
 
 const Wrapper = styled.div`
   width: 100%;
-  background: rgb(37, 72, 100)  ;
+  background: rgb(37, 72, 100);
   color: white;
 `;
 

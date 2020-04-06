@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import { styled } from 'linaria/react';
+import React, { useState, useEffect } from "react";
+import { graphql, StaticQuery } from "gatsby";
+import { styled } from "linaria/react";
 // import Img from 'gatsby-image';
 
-import BackgroundImage from 'gatsby-background-image';
+import BackgroundImage from "gatsby-background-image";
 // Use the following to support legacy browsers like IE11:
 // import BackgroundImage from 'gatsby-background-image-es5'
 
@@ -19,7 +19,7 @@ const HeroImage = ({ children }) => {
   const [scrollValue, setScrollValue] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       setScrollValue(window.scrollY);
     });
   });
@@ -49,15 +49,15 @@ const HeroImage = ({ children }) => {
               fluid={imageData}
               backgroundColor="#040e18"
               style={{
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundAttachment: 'fixed',
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
                 // top: -scrollValue,
                 // clipPath: 'polygon(100% 0, 100% 83%, 35% 95%, 0 87%, 0 0)',
               }}
               // https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles):
               id="hero_image"
-              fadeIn="soft"
+              // fadeIn="soft"
             >
               <HeroContainer>
                 <ChildContainer scrollValue={scrollValue} className="container">
@@ -76,7 +76,7 @@ const MainWrapper = styled.div`
   overflow: hidden;
   & *::before {
     transform: scale(
-      ${props => (props.scroll !== 0 ? 1 + (props.scroll * 0.01) / 10 : 1)}
+      ${(props) => (props.scroll !== 0 ? 1 + (props.scroll * 0.01) / 10 : 1)}
     );
   }
 `;
@@ -93,7 +93,7 @@ const HeroContainer = styled.div`
 
 const ChildContainer = styled.div`
   margin-top: 0;
-  margin-top: ${props => props.scrollValue * 1.1}px;
+  margin-top: ${(props) => props.scrollValue * 1.1}px;
 `;
 
 export default HeroImage;

@@ -1,38 +1,57 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jarod Peachey',
-    description:
-      'Front-End web developer with an eye for design. Experience in HTML, CSS, Javascript, Bootstrap, as well as back-end languages like PHP, MySQL and others.',
-    author: '@jarodpeachey',
+    title: "Tony Diaz",
+    description: "Front-End web developer.",
+    author: "Tony Diaz",
+    // Used for SEO
+    description: `Personal website for Tony Diaz`,
+    // Used for social links in the root footer
+    social: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/t_ony`,
+      },
+      {
+        name: `GitHub`,
+        url: `https://github.com/tonydiaz`,
+      },
+    ],
   },
   plugins: [
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'jarod-peachey',
-        short_name: 'jarod-peachey',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        name: "tony-diaz",
+        short_name: "tony-diaz",
+        start_url: "/",
+        background_color: "#663399",
+        theme_color: "#663399",
+        display: "minimal-ui",
+        icon: "src/images/TD_logo_tiny.png", // This path is relative to the root of the site.
       },
     },
     {
-      resolve: 'gatsby-plugin-zopfli',
+      resolve: "gatsby-plugin-zopfli",
       options: {
-        path: 'zopfli',
+        path: "zopfli",
       },
     },
-    'gatsby-plugin-linaria',
+    "gatsby-plugin-linaria",
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        // basePath defaults to `/`
+        basePath: `/blog`,
+      },
+    },
   ],
 };
