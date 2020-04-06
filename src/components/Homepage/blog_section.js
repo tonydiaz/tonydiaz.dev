@@ -2,7 +2,8 @@ import React from "react";
 import { styled } from "linaria/react";
 import { graphql, StaticQuery, Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRss } from "@fortawesome/free-solid-svg-icons";
 const Row = styled.div`
   margin-top: 32px;
 `;
@@ -70,13 +71,16 @@ const BlogSection = () => (
                     className="col col-4 desktop-col-4 center-text"
                     key={blog.title}
                   >
-                    <div className="">
+                    <Card>
                       <Link to={blog.slug}>
+                        <BlogIcon>
+                          <FontAwesomeIcon icon={faRss} />
+                        </BlogIcon>
                         <ColorLink>
                           <h4>{blog.title}</h4>
                         </ColorLink>
                       </Link>
-                    </div>
+                    </Card>
                   </div>
                 );
               })}
@@ -95,8 +99,31 @@ const Wrapper = styled.div`
   }
 `;
 
+const Card = styled.div`
+  background: white;
+  height: 9rem;
+  padding: 1rem;
+`;
+
 const ColorLink = styled.div`
-  color: white;
+  color: var(--primary);
+`;
+
+const BlogIcon = styled.div`
+  // height: 135px;
+  width: 160px;
+  margin: 0 auto;
+  // background: rgb(37, 72, 100);
+  // padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 48px;
+  // font-weight: bold;
+  // clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+  // clip-path: polygon(22% 0%, 78% 0%, 100% 50%, 78% 100%, 22% 100%, 0% 50%);
+  margin-bottom: 12px;
 `;
 
 export default BlogSection;
