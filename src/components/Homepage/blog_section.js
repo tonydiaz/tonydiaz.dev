@@ -103,6 +103,9 @@ const Card = styled.div`
   background: white;
   height: 9rem;
   padding: 1rem;
+  &:hover {
+    background: lightgray;
+  }
 `;
 
 const ColorLink = styled.div`
