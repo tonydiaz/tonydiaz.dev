@@ -43,6 +43,7 @@ const HeroImage = ({ children }) => {
         return (
           <MainWrapper scroll={scrollValue}>
             <BackgroundImage
+              id="Hero image - code"
               Tag="section"
               // To style via external CSS see layout.css last examples:
               // className="test"

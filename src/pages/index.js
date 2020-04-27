@@ -56,7 +56,6 @@ const IndexPage = ({ data }) => (
     <HeroImage id="home">
       <TonyImage />
       <h1 className="hero_title">Hi. I'm Tony</h1>
-
       <h4 className="hero_subtitle">
         I'm a Frontend web developer focused on shipping code, testing and
         maintainabiity.

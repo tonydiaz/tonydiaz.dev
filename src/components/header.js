@@ -92,7 +92,7 @@ const Header = ({ siteTitle }) => {
                   <br />
                   <br />
                   <br />
-                  <a
+                  {/* <a
                     href="https://github.com/tonydiaz"
                     className="mobile-menu-item"
                   >
@@ -109,7 +109,7 @@ const Header = ({ siteTitle }) => {
                       icon={["fab", "linkedin"]}
                       id="menu-toggle"
                     />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

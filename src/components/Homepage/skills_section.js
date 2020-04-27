@@ -126,7 +126,7 @@ const SkillsSection = () => (
             background: "linear-gradient()",
           }}
           // https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles):
-          id="hero_image"
+          id="skills_section_image"
           fadeIn="soft"
         >
           <Wrapper className="container" id="skills">

@@ -12,18 +12,27 @@ const Footer = () => (
         <div className="col col-6 center-text tablet-align-text-left">
           <div className="row mobile align-center tablet-align-right">
             <div className="menu-item">
-              <MenuLink href="mailto:td@tonydiaz.me">
+              <MenuLink href="mailto:td@tonydiaz.me" aria-label="Email link">
                 <FontAwesomeIcon icon="envelope" />
               </MenuLink>
             </div>
             <div className="menu-item">
-              <MenuLink href="https://github.com/tonydiaz">
-                <FontAwesomeIcon icon={["fab", "github"]} id="menu-toggle" />
+              <MenuLink
+                href="https://github.com/tonydiaz"
+                aria-label="Github link"
+              >
+                <FontAwesomeIcon icon={["fab", "github"]} id="github-icon" />
               </MenuLink>
             </div>
             <div className="menu-item">
-              <MenuLink href="https://linkedin.com/in/anthonydiaz">
-                <FontAwesomeIcon icon={["fab", "linkedin"]} id="menu-toggle" />
+              <MenuLink
+                href="https://linkedin.com/in/anthonydiaz"
+                aria-label="LinkedIn link"
+              >
+                <FontAwesomeIcon
+                  icon={["fab", "linkedin"]}
+                  id="linkedin-icon"
+                />
               </MenuLink>
             </div>
           </div>
