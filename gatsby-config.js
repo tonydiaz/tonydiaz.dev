@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
     title: "Tony Diaz",
-    description: "Front-End web developer.",
     author: "Tony Diaz",
     // Used for SEO
     description: `Personal website for Tony Diaz`,
