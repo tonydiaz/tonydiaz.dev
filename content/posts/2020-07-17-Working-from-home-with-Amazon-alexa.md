@@ -1,6 +1,6 @@
 ---
 title: Working from home with Amazon Alexa
-description: "Using Alexa throughout the workday has given conveniences while working from home."
+description: "Having a virtual assistant while working from home provides some nice uses throughout the day."
 tags: [Alexa, AI, assistant, discuss]
 canonicalLink: https://dev.to/tonydiaz/make-your-own-gatsby-starter-template-349o
 date: 2020-07-17
